@@ -64,7 +64,7 @@ cd ../../
 export LD_LIBRARY_PATH=esmini/bin
 pip3 install .
 
-python3 -c "import cmake_example; print(cmake_example.add(1, 2))"
+python3 -c "import cmake_example; print(cmake_example.add(1, 2)) ; print(cmake_example.myesmini())"
 ```
 
 With the `setup.py` file included in this example, the `pip install` command will
@@ -117,3 +117,17 @@ cmake_example.add(1, 2)
 [`cibuildwheel`]:          https://cibuildwheel.readthedocs.io
 [FAQ]: http://pybind11.rtfd.io/en/latest/faq.html#working-with-ancient-visual-studio-2009-builds-on-windows
 [vs2015_runtime]: https://www.microsoft.com/en-us/download/details.aspx?id=48145
+
+
+
+
+
+```
+set(LIB_DIRS esmini/ esmini/bin/ esmini/lib esmini/EnvironmentSimulator/Libraries/esminiLib esmini/EnvironmentSimulator/Libraries/esminiRMLib )
+link_directories(${LIB_DIRS})
+
+set (CMAKE_SHARED_LINKER_FLAGS "-L/home/wave/repositories/esmini-pybind11/esmini/bin/ -lesminiLib -lesminiRMLib")
+set (CMAKE_MODULE_LINKER_FLAGS "-L/home/wave/repositories/esmini-pybind11/esmini/bin/ -lesminiLib -lesminiRMLib")
+set (CMAKE_STATIC_LINKER_FLAGS "-L/home/wave/repositories/esmini-pybind11/esmini/bin/ -lesminiLib -lesminiRMLib")
+add_compile_options("-L/home/wave/repositories/esmini-pybind11/esmini/bin/ -lesminiLib -lesminiRMLib")
+```
