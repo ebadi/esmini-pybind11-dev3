@@ -51,8 +51,20 @@ Just clone this repository and pip install. Note the `--recursive` option which 
 needed for the pybind11 submodule:
 
 ```bash
-git clone --recursive https://github.com/pybind/cmake_example.git
-pip install ./cmake_example
+git clone --recursive https://github.com/ebadi/esmini-pybind11
+cd ./esmini-pybind11
+git clone https://github.com/ebadi/esmini
+cd esmini
+mkdir build
+cd build
+cmake ../ -DUSE_OSG=true -DCMAKE_BUILD_TYPE=Release
+cmake --build . --config Release --target install
+cd ../../
+
+export LD_LIBRARY_PATH=esmini/bin
+pip3 install .
+
+python3 -c "import cmake_example; print(cmake_example.add(1, 2))"
 ```
 
 With the `setup.py` file included in this example, the `pip install` command will
