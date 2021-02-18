@@ -3,6 +3,7 @@
 #include "RoadManager.hpp"
 #include "CommonMini.hpp"
 #include "pugixml.hpp"
+#include <pybind11/stl.h>
 
 #define STRINGIFY(x) #x
 #define MACRO_STRINGIFY(x) STRINGIFY(x)
@@ -102,9 +103,14 @@ PYBIND11_MODULE(cmake_example, m) {
         ;
 
     // bindings to OSIPoints class
+    py::class_<roadmanager::OSIPoints::OSIPointStruct>(m, "OSIPointStruct")
+        .def(py::init<double, double, double, double, double>())
+        ;
+
+    // bindings to OSIPoints class
     py::class_<roadmanager::OSIPoints>(m, "OSIPoints")
-        .def(py::init<>())
-        //.def(py::init<std::vector<roadmanager::OSIPoints::OSIPointStruct> >())
+        //.def(py::init<>())
+        .def(py::init<std::vector<roadmanager::OSIPoints::OSIPointStruct> >())
         ;
 /*
 	class OSIPoints

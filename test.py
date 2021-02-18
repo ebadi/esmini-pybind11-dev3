@@ -26,6 +26,26 @@ print(my_pol.GetB())
 print(my_pol.GetC())
 print(my_pol.GetD())
 
+osi_struct = OSIPointStruct(1,2,3,4,5)
+print(osi_struct)
+print(OSIPoints([osi_struct ]))
+"""
+my_osi_point = OSIPoints([(1,2,3,4,5)])
 
-my_osi_point = OSIPoints()
-# my_osi_point = OSIPoints(["x",2,3,4,5])
+
+[{
+  "s": 1,
+  "x": 2,
+  "y": 3,
+  "z":4,
+  "h":5,
+}, {
+  "s": 1,
+  "x": 2,
+  "y": 3,
+  "z":4,
+  "h":5,
+}]
+"""
+
+
