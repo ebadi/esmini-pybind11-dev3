@@ -3,7 +3,7 @@ project(cmake_example)
 
 add_subdirectory(pybind11)
 
-set(INCLUDE_DIRS esmini/externals/pugixml/ esmini/EnvironmentSimulator/Modules/CommonMini/ esmini/EnvironmentSimulator/Libraries/esminiLib/ esmini/EnvironmentSimulator/Modules/RoadManager/)
+set(INCLUDE_DIRS src/ src/unknown esmini/externals/pugixml/ esmini/EnvironmentSimulator/Modules/CommonMini/ esmini/EnvironmentSimulator/Libraries/esminiLib/ esmini/EnvironmentSimulator/Modules/RoadManager/)
 include_directories(${INCLUDE_DIRS})
 
 link_libraries("-L/home/wave/repositories/esmini-pybind11/esmini/bin/ -lesminiLib -lesminiRMLib")
