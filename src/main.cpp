@@ -4,6 +4,7 @@
 #include "CommonMini.hpp"
 #include "pugixml.hpp"
 #include <pybind11/stl.h>
+#include <functional>
 
 #define STRINGIFY(x) #x
 #define MACRO_STRINGIFY(x) STRINGIFY(x)
@@ -68,10 +69,22 @@ class Pet
 		double p_scale_;
 	};
 
+
 namespace py = pybind11;
 using namespace roadmanager;
 
+typedef std::function< pybind11::module & (std::string const &) > ModuleGetter;
+
+
 PYBIND11_MODULE(cmake_example, m) {
+	m.doc() = "cmake_examplemodule";
+
+	std::map <std::string, pybind11::module> modules;
+	ModuleGetter M = [&](std::string const &namespace_) -> pybind11::module & {
+		auto it = modules.find(namespace_);
+		if( it == modules.end() ) throw std::runtime_error("Attempt to access pybind11::module for namespace " + namespace_ + " before it was created!!!");
+		return it->second;
+	};
 
     m.def("add", &add);
     m.def("myesmini", &myesmini);
@@ -125,6 +138,15 @@ PYBIND11_MODULE(cmake_example, m) {
         .def("GetNumOfOSIPoints", &roadmanager::OSIPoints::GetNumOfOSIPoints)
         ;
 
+
+		pybind11::class_<roadmanager::Line>(m, "Line")
+		.def( pybind11::init<double, double, double, double, double>(), pybind11::arg("s"), pybind11::arg("x"), pybind11::arg("y"), pybind11::arg("hdg"), pybind11::arg("length") )
+
+		.def( pybind11::init( [](roadmanager::Line const &o){ return new roadmanager::Line(o); } ) )
+		.def("Print", (void (roadmanager::Line::*)()) &roadmanager::Line::Print, "C++: roadmanager::Line::Print() --> void")
+		.def("EvaluateDS", (void (roadmanager::Line::*)(double, double *, double *, double *)) &roadmanager::Line::EvaluateDS, "C++: roadmanager::Line::EvaluateDS(double, double *, double *, double *) --> void", pybind11::arg("ds"), pybind11::arg("x"), pybind11::arg("y"), pybind11::arg("h"))
+		.def("EvaluateCurvatureDS", (double (roadmanager::Line::*)(double)) &roadmanager::Line::EvaluateCurvatureDS, "C++: roadmanager::Line::EvaluateCurvatureDS(double) --> double", pybind11::arg("ds"))
+		.def("assign", (class roadmanager::Line & (roadmanager::Line::*)(const class roadmanager::Line &)) &roadmanager::Line::operator=, "C++: roadmanager::Line::operator=(const class roadmanager::Line &) --> class roadmanager::Line &", pybind11::return_value_policy::automatic, pybind11::arg(""));
 
     /*
     py::class_<roadmanager::Geometry>(m, "Geometry")
