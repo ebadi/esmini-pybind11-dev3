@@ -6,9 +6,9 @@ add_subdirectory(pybind11)
 set(INCLUDE_DIRS src/ src/unknown esmini/externals/pugixml/ esmini/EnvironmentSimulator/Modules/CommonMini/ esmini/EnvironmentSimulator/Libraries/esminiLib/ esmini/EnvironmentSimulator/Modules/RoadManager/)
 include_directories(${INCLUDE_DIRS})
 
-link_libraries("-L/home/wave/repositories/esmini-pybind11/esmini/bin/ -lesminiLib -lesminiRMLib")
+link_libraries("-L/home/wave/repositories/esmini-pybind11/esmini/bin/ -L/home/wave/repositories/esmini-pybind11/esmini/EnvironmentSimulator/Libraries/esminiLib/  -L/home/wave/repositories/esmini-pybind11/esmini/EnvironmentSimulator/Modules/RoadManager/ -lesminiLib -lesminiRMLib")
 
-pybind11_add_module(cmake_example src/main.cpp)
+pybind11_add_module(cmake_example src/roadrunner.cpp)
 
 
 # EXAMPLE_VERSION_INFO is defined by setup.py and passed into the C++ code as a
