@@ -102,38 +102,81 @@ PYBIND11_MODULE(cmake_example, m) {
         .def("EvaluatePrimPrim", &roadmanager::Polynomial::EvaluatePrimPrim)
         ;
 
-    // bindings to OSIPoints class
+    // bindings to OSIPointStruct struct
     py::class_<roadmanager::OSIPoints::OSIPointStruct>(m, "OSIPointStruct")
         .def(py::init<double, double, double, double, double>())
+        .def_readwrite("s", &roadmanager::OSIPoints::OSIPointStruct::s)
+        .def_readwrite("x", &roadmanager::OSIPoints::OSIPointStruct::x)
+        .def_readwrite("y", &roadmanager::OSIPoints::OSIPointStruct::y)
+        .def_readwrite("z", &roadmanager::OSIPoints::OSIPointStruct::z)
+        .def_readwrite("h", &roadmanager::OSIPoints::OSIPointStruct::h)
         ;
 
     // bindings to OSIPoints class
     py::class_<roadmanager::OSIPoints>(m, "OSIPoints")
-        //.def(py::init<>())
+        .def(py::init<>())
         .def(py::init<std::vector<roadmanager::OSIPoints::OSIPointStruct> >())
+        .def("Set", &roadmanager::OSIPoints::Set)
+        .def("GetPoints", &roadmanager::OSIPoints::GetPoints)
+        .def("GetPoint", &roadmanager::OSIPoints::GetPoint)
+        .def("GetXfromIdx", &roadmanager::OSIPoints::GetXfromIdx)
+        .def("GetYfromIdx", &roadmanager::OSIPoints::GetYfromIdx)
+        .def("GetZfromIdx", &roadmanager::OSIPoints::GetZfromIdx)
+        .def("GetNumOfOSIPoints", &roadmanager::OSIPoints::GetNumOfOSIPoints)
         ;
-/*
-	class OSIPoints
-	{
-		public:
-			typedef struct
-			{
-				double s;
-				double x;
-				double y;
-				double z;
-				double h;
-			} OSIPointStruct;
 
-			OSIPoints() {}
-			OSIPoints(std::vector<OSIPointStruct> points) : point_(points) {}
-			void Set(std::vector<OSIPointStruct> points) { point_ = points; }
-			std::vector<OSIPointStruct>& GetPoints() {return point_;}
-			OSIPointStruct& GetPoint(int i);
-			double GetXfromIdx(int i);
-			double GetYfromIdx(int i);
-			double GetZfromIdx(int i);
-			int GetNumOfOSIPoints();
+
+    /*
+    py::class_<roadmanager::Geometry>(m, "Geometry")
+        .def(py::init<>())
+        //.def(py::init<double , double , double , double , double, double>())
+
+        ;
+        */
+/*
+    py::enum_<roadmanager::Geometry::GeometryType>(m, "GeometryType")
+        .value("GEOMETRY_TYPE_UNKNOWN", roadmanager::Geometry::GEOMETRY_TYPE_UNKNOWN)
+        .value("GEOMETRY_TYPE_LINE", roadmanager::Geometry::GEOMETRY_TYPE_LINE)
+        .value("GEOMETRY_TYPE_ARC", roadmanager::Geometry::GEOMETRY_TYPE_ARC)
+        .value("GEOMETRY_TYPE_SPIRAL", roadmanager::Geometry::GEOMETRY_TYPE_SPIRAL)
+        .value("GEOMETRY_TYPE_POLY3", roadmanager::Geometry::GEOMETRY_TYPE_POLY3)
+        .value("GEOMETRY_TYPE_PARAM_POLY3", roadmanager::Geometry::GEOMETRY_TYPE_PARAM_POLY3)
+        .export_values()
+        ;
+*/
+/*
+py::enum_<Pet::Kind>(pet, "Kind")
+    .value("Dog", Pet::Kind::Dog)
+    .value("Cat", Pet::Kind::Cat)
+    .export_values();
+
+		enum GeometryType
+		{
+			GEOMETRY_TYPE_UNKNOWN,
+			GEOMETRY_TYPE_LINE,
+			GEOMETRY_TYPE_ARC,
+			GEOMETRY_TYPE_SPIRAL,
+			GEOMETRY_TYPE_POLY3,
+			GEOMETRY_TYPE_PARAM_POLY3,
+		};
+
+		Geometry() : s_(0.0), x_(0.0), y_(0), hdg_(0), length_(0), type_(GeometryType::GEOMETRY_TYPE_UNKNOWN) {}
+		Geometry(double s, double x, double y, double hdg, double length, GeometryType type) :
+			s_(s), x_(x), y_(y), hdg_(hdg), length_(length), type_(type) {}
+		virtual ~Geometry() {}
+
+		GeometryType GetType() { return type_; }
+		double GetLength() { return length_; }
+		virtual double GetX() { return x_; }
+		void SetX(double x) { x_ = x; }
+		virtual double GetY() { return y_; }
+		void SetY(double y) { y_ = y; }
+		virtual double GetHdg() { return GetAngleInInterval2PI(hdg_); }
+		void SetHdg(double hdg) { hdg_ = hdg; }
+		double GetS() { return s_; }
+		virtual double EvaluateCurvatureDS(double ds) = 0;
+		virtual void Print();
+		virtual void EvaluateDS(double ds, double *x, double *y, double *h);
 */
 #ifdef VERSION_INFO
     m.attr("__version__") = MACRO_STRINGIFY(VERSION_INFO);
