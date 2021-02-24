@@ -74,10 +74,18 @@ commonmini
 
 
 
+
+
+
 MYMODULE=roadmanager
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
-/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind $MYMODULE $PWD/src/$MYMODULE.hpp -config pybind.conf  -- -std=c++17 -DNDEBUG $IPATHS
+/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind $MYMODULE  --skip pugi $PWD/src/$MYMODULE.hpp  -- -std=c++11 -DNDEBUG $IPATHS
 pip3 install . ; python3 -c "import cmake_example; print(dir())"
+
+
+
+
+
 
 
 viewer
