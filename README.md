@@ -62,9 +62,7 @@ cmake --build . --config Release --target install
 cd ../../
 
 export LD_LIBRARY_PATH=esmini/bin
-pip3 install .
 
-python3 -c "import cmake_example"
 
 IPATHS=" -Iesmini/externals/pugixml/ -Iesmini/EnvironmentSimulator/Modules/CommonMini/ -Iesmini/EnvironmentSimulator/Modules/RoadManager   -Iesmini/EnvironmentSimulator/Modules/Controllers  -Iesmini/EnvironmentSimulator/Modules/PlayerBase -Iesmini/EnvironmentSimulator/Modules/ScenarioEngine/SourceFiles/  -Iesmini/EnvironmentSimulator/Modules/ScenarioEngine/OSCTypeDefs/ -Iesmini/EnvironmentSimulator/Modules/ViewerBase -Iesmini/EnvironmentSimulator/Libraries/esminiLib/  -I/home/wave/repositories/esmini-pybind11/esmini/bin/ "
 
@@ -73,17 +71,49 @@ scenarioengine
 controller
 commonmini
 ---------------------------
+
+
+
 MYMODULE=roadmanager
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
-/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind $MYMODULE $PWD/src/$MYMODULE.hpp  -- $IPATHS
-
+/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind $MYMODULE $PWD/src/$MYMODULE.hpp -config pybind.conf  -- -std=c++17 -DNDEBUG $IPATHS
+pip3 install . ; python3 -c "import cmake_example; print(dir())"
 
 
 viewer
 ---------------------------
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
 /home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind $MYMODULE $PWD/src/viewerx.hpp  -- $IPATHS
+
+
+
 ```
+
+
+
+```
+
+# link_libraries("-L${CMAKE_CURRENT_SOURCE_DIR}/esmini/bin/ -L${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Libraries/esminiLib/  -L${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/ -lesminiLib -lesminiRMLib")
+
+file(GLOB MY_SRCS
+	"${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/*.cpp"
+	"${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/*.hpp"
+	"${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/*.cpp"
+	"${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/*.hpp"
+	#"${CMAKE_CURRENT_SOURCE_DIR}/esmini/external/pugixml/*.hpp"
+	#"${CMAKE_CURRENT_SOURCE_DIR}/esmini/external/pugixml/*.cpp"
+	#"${CMAKE_CURRENT_SOURCE_DIR}/src/roadmanager/unknown/*.cpp"
+	#"${CMAKE_CURRENT_SOURCE_DIR}/src/roadmanager/std/*.cpp"
+)
+add_library(mylib ${MY_SRCS})
+# esminiLib esminiRMLib
+target_link_libraries(cmake_example PUBLIC mylib )
+
+```
+
+# https://github.com/RosettaCommons/binder
+# https://github.com/MRPT/mvsim/tree/master/modules/comms
+# https://github.com/vgteam/libbdsg/tree/master/bdsg/cmake_bindings
 
 With the `setup.py` file included in this example, the `pip install` command will
 invoke CMake and build the pybind11 module as specified in `CMakeLists.txt`.
