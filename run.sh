@@ -7,5 +7,5 @@ IPATHS=" -Iesmini/externals/pugixml/ -Iesmini/EnvironmentSimulator/Modules/Commo
 MYMODULE=roadmanager
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
 /home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind $MYMODULE  --single-file --suppress-errors  --config pyconfig.conf  $PWD/src/$MYMODULE.hpp  -- -std=c++11 -DNDEBUG $IPATHS
-pip3 install . ; python3 -c "import cmake_example; print(dir())"
+pip3 install . ; python3 -c "import pyroadmanager; print(dir())"
 
