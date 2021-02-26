@@ -14,7 +14,7 @@ ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Libraries/esminiLib/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/pugixml/
 ${CMAKE_CURRENT_SOURCE_DIR}/src/
-${CMAKE_CURRENT_SOURCE_DIR}/src/roadmanager
+${CMAKE_CURRENT_SOURCE_DIR}/src/roadmanager/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ScenarioEngine/SourceFiles/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ScenarioEngine/OSCTypeDefs/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/Controllers/
