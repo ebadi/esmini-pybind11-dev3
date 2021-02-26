@@ -19,11 +19,21 @@ ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ScenarioEngine/S
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ScenarioEngine/OSCTypeDefs/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/Controllers/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/OSI/linux/include/
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Applications/replayer/
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/PlayerBase/
 )
 include_directories(${INCLUDE_DIRS})
 
 find_package(PythonLibs)
 include_directories(${PYTHON_INCLUDE_DIRS})
+
+link_libraries(
+-L${CMAKE_CURRENT_SOURCE_DIR}/esmini/bin/
+-L/home/wave/repositories/esmini-pybind11/esmini/EnvironmentSimulator/Libraries/esminiLib/
+-L/home/wave/repositories/esmini-pybind11/esmini/EnvironmentSimulator/Modules/RoadManager/
+-lesminiLib
+-lesminiRMLib
+)
 
 pybind11_add_module(pyroadmanager src/roadmanager/pyroadmanager.cpp
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/RoadManager.cpp
@@ -42,6 +52,13 @@ file(GLOB SCENARIO_SRCS
 )
 
 
-pybind11_add_module(pyscenario ${SCENARIO_SRCS}
+pybind11_add_module(pyscenarioengine src/scenarioengine/pyscenarioengine.cpp
+${SCENARIO_SRCS}
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/RoadManager.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/odrSpiral.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/CommonMini.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/buildnr.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/version.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/pugixml/pugixml.cpp
 )
-target_compile_definitions(pyscenario PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
+target_compile_definitions(pyscenarioengine PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
