@@ -14,6 +14,8 @@
 #include "ControllerExternal.hpp"
 #include "RoadManager.hpp"
 #include "Server.hpp"
+#include "IdealSensor.hpp"
+#include "OSIReporter.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -68,6 +70,8 @@ void bind_unknown_unknown(std::function< pybind11::module &(std::string const &n
 #include "ControllerExternal.hpp"
 #include "RoadManager.hpp"
 #include "Server.hpp"
+#include "IdealSensor.hpp"
+#include "OSIReporter.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -245,6 +249,8 @@ void bind_unknown_unknown_1(std::function< pybind11::module &(std::string const 
 #include "ControllerExternal.hpp"
 #include "RoadManager.hpp"
 #include "Server.hpp"
+#include "IdealSensor.hpp"
+#include "OSIReporter.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -796,6 +802,8 @@ void bind_unknown_unknown_2(std::function< pybind11::module &(std::string const 
 #include "ControllerExternal.hpp"
 #include "RoadManager.hpp"
 #include "Server.hpp"
+#include "IdealSensor.hpp"
+#include "OSIReporter.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -1199,6 +1207,8 @@ void bind_unknown_unknown_3(std::function< pybind11::module &(std::string const 
 #include "ControllerExternal.hpp"
 #include "RoadManager.hpp"
 #include "Server.hpp"
+#include "IdealSensor.hpp"
+#include "OSIReporter.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -1807,6 +1817,8 @@ void bind_unknown_unknown_4(std::function< pybind11::module &(std::string const 
 #include "ControllerExternal.hpp"
 #include "RoadManager.hpp"
 #include "Server.hpp"
+#include "IdealSensor.hpp"
+#include "OSIReporter.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -2632,6 +2644,8 @@ void bind_unknown_unknown_5(std::function< pybind11::module &(std::string const 
 #include "ControllerExternal.hpp"
 #include "RoadManager.hpp"
 #include "Server.hpp"
+#include "IdealSensor.hpp"
+#include "OSIReporter.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -3081,6 +3095,8 @@ void bind_unknown_unknown_6(std::function< pybind11::module &(std::string const 
 #include "ControllerExternal.hpp"
 #include "RoadManager.hpp"
 #include "Server.hpp"
+#include "IdealSensor.hpp"
+#include "OSIReporter.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -3580,6 +3596,8 @@ void bind_unknown_unknown_7(std::function< pybind11::module &(std::string const 
 #include "ControllerExternal.hpp"
 #include "RoadManager.hpp"
 #include "Server.hpp"
+#include "IdealSensor.hpp"
+#include "OSIReporter.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -3949,13 +3967,14 @@ void bind_unknown_unknown_8(std::function< pybind11::module &(std::string const 
 #include <pybind11/stl_bind.h>
 #include <pybind11/functional.h>
 #include <fstream>
-
 #include "ScenarioEngine.hpp"
-#include "RoadManager.hpp"
 #include "CommonMini.hpp"
+#include "ControllerFollowGhost.hpp"
+#include "ControllerExternal.hpp"
+#include "RoadManager.hpp"
 #include "Server.hpp"
-#include "playerbase.hpp"
-#include "viewer.hpp"
+#include "IdealSensor.hpp"
+#include "OSIReporter.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER

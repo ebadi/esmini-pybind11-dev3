@@ -22,7 +22,7 @@ pip3 install . ;
 
 #python3 -c "import pyroadmanager.roadmanager; print(dir(pyroadmanager.roadmanager));"
 #python3 -c "import pyscenarioengine.scenarioengine; print(dir(pyscenarioengine.scenarioengine));"
-python3 -c "import pyplayerbasee; print(dir(pyplayerbasee));"
+python3 -c "import pyplayerbase; print(dir(pyplayerbase));"
 
 
 # pip3 install -U sphinx
