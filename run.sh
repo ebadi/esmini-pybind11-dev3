@@ -17,6 +17,6 @@ pip3 install . ;
 python3 -c "import pyroadmanager.roadmanager; print(dir(pyroadmanager.roadmanager));"
 python3 -c "import pyscenarioengine.scenarioengine; print(dir(pyscenarioengine.scenarioengine));"
 
-
+# pip3 install -U sphinx
 cd docs
 make html
