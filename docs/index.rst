@@ -1,4 +1,4 @@
-cmake_example Documentation
+PyEsmini Documentation
 ============================
 
 Contents:

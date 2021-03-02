@@ -61,33 +61,10 @@ cmake ../ -DUSE_OSG=true -DCMAKE_BUILD_TYPE=Release
 cmake --build . --config Release --target install
 cd ../../
 
-export LD_LIBRARY_PATH=esmini/bin
-
-
+./run.sh
 
 ```
 
-
-
-```
-
-# link_libraries("-L${CMAKE_CURRENT_SOURCE_DIR}/esmini/bin/ -L${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Libraries/esminiLib/  -L${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/ -lesminiLib -lesminiRMLib")
-
-file(GLOB MY_SRCS
-	"${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/*.cpp"
-	"${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/*.hpp"
-	"${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/*.cpp"
-	"${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/*.hpp"
-	#"${CMAKE_CURRENT_SOURCE_DIR}/esmini/external/pugixml/*.hpp"
-	#"${CMAKE_CURRENT_SOURCE_DIR}/esmini/external/pugixml/*.cpp"
-	#"${CMAKE_CURRENT_SOURCE_DIR}/src/roadmanager/unknown/*.cpp"
-	#"${CMAKE_CURRENT_SOURCE_DIR}/src/roadmanager/std/*.cpp"
-)
-add_library(mylib ${MY_SRCS})
-# esminiLib esminiRMLib
-target_link_libraries(cmake_example PUBLIC mylib )
-
-```
 
 # https://github.com/RosettaCommons/binder
 # https://github.com/MRPT/mvsim/tree/master/modules/comms
@@ -143,17 +120,3 @@ cmake_example.add(1, 2)
 [`cibuildwheel`]:          https://cibuildwheel.readthedocs.io
 [FAQ]: http://pybind11.rtfd.io/en/latest/faq.html#working-with-ancient-visual-studio-2009-builds-on-windows
 [vs2015_runtime]: https://www.microsoft.com/en-us/download/details.aspx?id=48145
-
-
-
-
-
-```
-set(LIB_DIRS esmini/ esmini/bin/ esmini/lib esmini/EnvironmentSimulator/Libraries/esminiLib esmini/EnvironmentSimulator/Libraries/esminiRMLib )
-link_directories(${LIB_DIRS})
-
-set (CMAKE_SHARED_LINKER_FLAGS "-L/home/wave/repositories/esmini-pybind11/esmini/bin/ -lesminiLib -lesminiRMLib")
-set (CMAKE_MODULE_LINKER_FLAGS "-L/home/wave/repositories/esmini-pybind11/esmini/bin/ -lesminiLib -lesminiRMLib")
-set (CMAKE_STATIC_LINKER_FLAGS "-L/home/wave/repositories/esmini-pybind11/esmini/bin/ -lesminiLib -lesminiRMLib")
-add_compile_options("-L/home/wave/repositories/esmini-pybind11/esmini/bin/ -lesminiLib -lesminiRMLib")
-```
