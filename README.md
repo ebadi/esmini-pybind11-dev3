@@ -99,7 +99,7 @@ the extension module to generate beautiful documentation in a variety formats.
 The following command generates HTML-based reference documentation; for other
 formats please refer to the Sphinx manual:
 
- - `cd cmake_example/docs`
+ - `cd docs`
  - `make html`
 
 
@@ -113,8 +113,7 @@ terms and conditions of this license.
 ## Test call
 
 ```python
-import cmake_example
-cmake_example.add(1, 2)
+
 ```
 
 [`cibuildwheel`]:          https://cibuildwheel.readthedocs.io
