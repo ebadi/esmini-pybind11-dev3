@@ -50,6 +50,10 @@ some trade-offs not present in a pure setuptools build (see
 Just clone this repository and pip install. Note the `--recursive` option which is
 needed for the pybind11 submodule:
 
+## BUG, TODO
+pyplayerbase.ScenarioPlayer misses many methods!
+
+
 ```bash
 git clone --recursive https://github.com/ebadi/esmini-pybind11
 cd ./esmini-pybind11
