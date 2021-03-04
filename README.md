@@ -1,35 +1,4 @@
-# cmake_example for pybind11
 
-[![Gitter][gitter-badge]][gitter-link]
-
-|      CI              | status |
-|----------------------|--------|
-| MSVC 2015            | [![AppVeyor][appveyor-badge]][appveyor-link] |
-| conda.recipe         | [![Conda Actions Status][actions-conda-badge]][actions-conda-link] |
-| pip builds           | [![Pip Actions Status][actions-pip-badge]][actions-pip-link] |
-| [`cibuildwheel`][]   | [![Wheels Actions Status][actions-wheels-badge]][actions-wheels-link] |
-
-[gitter-badge]:            https://badges.gitter.im/pybind/Lobby.svg
-[gitter-link]:             https://gitter.im/pybind/Lobby
-[actions-badge]:           https://github.com/pybind/cmake_example/workflows/Tests/badge.svg
-[actions-conda-link]:      https://github.com/pybind/cmake_example/actions?query=workflow%3A%22Conda
-[actions-conda-badge]:     https://github.com/pybind/cmake_example/workflows/Conda/badge.svg
-[actions-pip-link]:        https://github.com/pybind/cmake_example/actions?query=workflow%3A%22Pip
-[actions-pip-badge]:       https://github.com/pybind/cmake_example/workflows/Pip/badge.svg
-[actions-wheels-link]:     https://github.com/pybind/cmake_example/actions?query=workflow%3AWheels
-[actions-wheels-badge]:    https://github.com/pybind/cmake_example/workflows/Wheels/badge.svg
-[appveyor-link]:           https://ci.appveyor.com/project/dean0x7d/cmake-example/branch/master
-[appveyor-badge]:          https://ci.appveyor.com/api/projects/status/57nnxfm4subeug43/branch/master?svg=true
-
-An example [pybind11](https://github.com/pybind/pybind11) module built with a
-CMake-based build system. This is useful for C++ codebases that have an
-existing CMake project structure. This is in many cases superseded by
-[`scikit_build_example`](https://github.com/pybind/scikit_build_example), which uses
-[scikit-build][], a tool from the makers of CMake designed to allow Python
-packages to be driven from CMake. However, there are still cases where you
-might want full control over the CMake run; and both of these approaches have
-some trade-offs not present in a pure setuptools build (see
-[`python_example`](https://github.com/pybind/python_example))
 
 ## Prerequisites
 
@@ -50,9 +19,18 @@ some trade-offs not present in a pure setuptools build (see
 Just clone this repository and pip install. Note the `--recursive` option which is
 needed for the pybind11 submodule:
 
-## BUG, TODO
+## Progress
 pyplayerbase.ScenarioPlayer misses many methods!
 
+| Module  | pyBind11  | documentation | Testcase |   Comment | 
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| RoadManager  | Done  | Done | Missing  | Problems with LaneRoadMarkType::Print(), IsIndirectlyConnected |
+| ScenarioEngine  | Done  | Done  | Missing  | - |
+| PlayerBase  | Incomplete  | Missing  | Missing  | Not all methods were covered  |
+| ViewerBase  | Error  | Missing  | Missing  | Probably issue with OSG! |
+| Controller  | Missing  | Missing  | Missing  | - |
+| esminiLib  | Missing  | Missing  | Missing  | It is used by default application,  seems to be more than a shared library! |
+| esminiRMLib  | Missing  | Missing  | Missing  | It is used by default application,  seems to be more than a shared library! |
 
 ```bash
 git clone --recursive https://github.com/ebadi/esmini-pybind11
@@ -69,6 +47,18 @@ cd ../../
 
 ```
 
+```
+python3 -c "import pyroadmanager.roadmanager; print(dir(pyroadmanager.roadmanager));"
+['Arc', 'CONTACT_POINT_END', 'CONTACT_POINT_NONE', 'CONTACT_POINT_START', 'CONTACT_POINT_UNKNOWN', 'Clothoid', 'Connection', 'ContactPointType', 'Elevation', 'Geometry', 'Junction', 'JunctionLaneLink', 'Lane', 'LaneBoundaryOSI', 'LaneInfo', 'LaneLink', 'LaneOffset', 'LaneRoadLaneConnection', 'LaneRoadMark', 'LaneRoadMarkType', 'LaneRoadMarkTypeLine', 'LaneSection', 'LaneWidth', 'Line', 'Nurbs', 'OSIPoints', 'Object', 'OpenDrive', 'ParamPoly3', 'Poly3', 'PolyLine', 'Polynomial', 'Position', 'ROADTYPE_BICYCLE', 'ROADTYPE_LOWSPEED', 'ROADTYPE_MOTORWAY', 'ROADTYPE_PEDESTRIAN', 'ROADTYPE_RURAL', 'ROADTYPE_TOWN', 'ROADTYPE_UNKNOWN', 'Road', 'RoadLink', 'RoadMarkInfo', 'RoadPath', 'RoadType', 'Route', 'Shape', 'Signal', 'Spiral', 'Trajectory', '__doc__', '__loader__', '__name__', '__package__', '__spec__']
+
+python3 -c "import pyscenarioengine.scenarioengine; print(dir(pyscenarioengine.scenarioengine));"
+['Act', 'ActivateControllerAction', 'AssignControllerAction', 'AssignRouteAction', 'Catalog', 'Catalogs', 'Center', 'ConditionGroup', 'Controller', 'ControllerPool', 'Dimensions', 'Entities', 'Entry', 'Event', 'FollowTrajectoryAction', 'Init', 'InstantiateController', 'LatLaneChangeAction', 'LatLaneOffsetAction', 'LongDistanceAction', 'LongSpeedAction', 'ManeuverGroup', 'MiscObject', 'OSCAction', 'OSCBoundingBox', 'OSCCondition', 'OSCFile', 'OSCGlobalAction', 'OSCManeuver', 'OSCOrientation', 'OSCParameterDeclarations', 'OSCPosition', 'OSCPositionLane', 'OSCPositionRelativeLane', 'OSCPositionRelativeObject', 'OSCPositionRelativeRoad', 'OSCPositionRelativeWorld', 'OSCPositionRoad', 'OSCPositionRoute', 'OSCPositionWorld', 'OSCPrivateAction', 'OSCProperties', 'Object', 'ObjectState', 'ObjectStateStruct', 'ObjectTrail', 'ParameterSetAction', 'Parameters', 'Pedestrian', 'RoadNetwork', 'ScenarioEngine', 'ScenarioGateway', 'ScenarioReader', 'Story', 'StoryBoard', 'StoryBoardElement', 'SynchronizeAction', 'TeleportAction', 'TrigByAcceleration', 'TrigByCollision', 'TrigByDistance', 'TrigByEndOfRoad', 'TrigByEntity', 'TrigByOffRoad', 'TrigByParameter', 'TrigByReachPosition', 'TrigByRelativeDistance', 'TrigByRelativeSpeed', 'TrigBySimulationTime', 'TrigBySpeed', 'TrigByStandStill', 'TrigByState', 'TrigByTimeHeadway', 'TrigByTimeToCollision', 'TrigByTraveledDistance', 'TrigByValue', 'Trigger', 'Vehicle', 'VisibilityAction', '__doc__', '__loader__', '__name__', '__package__', '__spec__']
+
+python3 -c "import pyplayerbase; print(dir(pyplayerbase.ScenarioPlayer));"
+['AddObjectSensor', 'Frame', 'GetFixedTimestep', 'GetOSIFreq', 'GetParameterValue', 'IsQuitRequested', 'ScenarioFrame', 'SetFixedTimestep', 'SetOSIFileStatus', 'SetParameterValue', 'ShowObjectSensors', 'UpdateCSV_Log', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'callback', 'exe_path_', 'maxStepSize', 'minStepSize', 'opt', 'sensor']
+
+
+```
 
 # https://github.com/RosettaCommons/binder
 # https://github.com/MRPT/mvsim/tree/master/modules/comms
@@ -112,14 +102,3 @@ formats please refer to the Sphinx manual:
 Pybind11 is provided under a BSD-style license that can be found in the LICENSE
 file. By using, distributing, or contributing to this project, you agree to the
 terms and conditions of this license.
-
-
-## Test call
-
-```python
-
-```
-
-[`cibuildwheel`]:          https://cibuildwheel.readthedocs.io
-[FAQ]: http://pybind11.rtfd.io/en/latest/faq.html#working-with-ancient-visual-studio-2009-builds-on-windows
-[vs2015_runtime]: https://www.microsoft.com/en-us/download/details.aspx?id=48145

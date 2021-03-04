@@ -36,7 +36,6 @@ link_libraries(
 -lesminiRMLib
 )
 
-if(FALSE)
 
 ############ pyroadmanager
 pybind11_add_module(pyroadmanager src/roadmanager/pyroadmanager.cpp
@@ -66,9 +65,6 @@ ${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/pugixml/pugixml.cpp
 )
 target_compile_definitions(pyscenarioengine PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
 
-endif()
-
-
 ############ pyplayerbase
 pybind11_add_module(pyplayerbase src/playerbase/pyplayerbase.cpp
 ${SCENARIO_SRCS}
@@ -81,3 +77,27 @@ ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ViewerBase/viewe
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/pugixml/pugixml.cpp
 )
 target_compile_definitions(pyplayerbase PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
+
+
+
+
+
+
+
+
+
+
+############ pyesminilib
+pybind11_add_module(pyesminilib src/esminilib/pyesminilib.cpp
+${SCENARIO_SRCS}
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/RoadManager.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/odrSpiral.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/CommonMini.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/buildnr.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/version.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ViewerBase/viewer.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/pugixml/pugixml.cpp
+)
+target_compile_definitions(pyesminilib PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
+
+
