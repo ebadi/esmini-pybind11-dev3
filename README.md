@@ -27,10 +27,10 @@ pyplayerbase.ScenarioPlayer misses many methods!
 | RoadManager  | Done  | Done | Missing  | Problems with LaneRoadMarkType::Print(), IsIndirectlyConnected |
 | ScenarioEngine  | Done  | Done  | Missing  | - |
 | PlayerBase  | Incomplete  | Missing  | Missing  | Not all methods were covered  |
-| ViewerBase  | Error  | Missing  | Missing  | Probably issue with OSG! |
+| ViewerBase  | Error  | Missing  | Missing  | Error everywhere, probably issue with external dependencies? |
 | Controller  | Missing  | Missing  | Missing  | - |
-| esminiLib  | Missing  | Missing  | Missing  | It is used by default application,  seems to be more than a shared library! |
-| esminiRMLib  | Missing  | Missing  | Missing  | It is used by default application,  seems to be more than a shared library! |
+| esminiLib  | Missing  | Missing  | Missing  | The internal methods were used by applications, it seems to be more than a shared library! |
+| esminiRMLib  | Missing  | Missing  | Missing  |  The internal methods were used by applications, it seems to be more than a shared library! |
 
 ```bash
 git clone --recursive https://github.com/ebadi/esmini-pybind11
@@ -60,9 +60,12 @@ python3 -c "import pyplayerbase; print(dir(pyplayerbase.ScenarioPlayer));"
 
 ```
 
-# https://github.com/RosettaCommons/binder
-# https://github.com/MRPT/mvsim/tree/master/modules/comms
-# https://github.com/vgteam/libbdsg/tree/master/bdsg/cmake_bindings
+## Important Links
+https://github.com/RosettaCommons/binder
+
+https://github.com/MRPT/mvsim/tree/master/modules/comms
+
+https://github.com/vgteam/libbdsg/tree/master/bdsg/cmake_bindings
 
 With the `setup.py` file included in this example, the `pip install` command will
 invoke CMake and build the pybind11 module as specified in `CMakeLists.txt`.
