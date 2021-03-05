@@ -36,7 +36,7 @@ link_libraries(
 -lesminiRMLib
 )
 
-if(FALSE)
+
 
 ############ pyroadmanager
 pybind11_add_module(pyroadmanager src/roadmanager/pyroadmanager.cpp
@@ -78,9 +78,6 @@ ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ViewerBase/viewe
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/pugixml/pugixml.cpp
 )
 target_compile_definitions(pyplayerbase PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
-
-endif()
-
 
 
 

@@ -7,6 +7,8 @@
 #include <pybind11/stl_bind.h>
 #include <pybind11/functional.h>
 #include <fstream>
+#include "esminiLib.hpp"
+#include "CommonMini.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
@@ -160,6 +162,8 @@ void bind_unknown_unknown(std::function< pybind11::module &(std::string const &n
 #include <pybind11/stl_bind.h>
 #include <pybind11/functional.h>
 #include <fstream>
+#include "esminiLib.hpp"
+#include "CommonMini.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
