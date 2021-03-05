@@ -29,8 +29,8 @@ pyplayerbase.ScenarioPlayer misses many methods!
 | PlayerBase  | Incomplete  | Missing  | Missing  | Not all methods were covered  |
 | ViewerBase  | Error  | Missing  | Missing  | Error everywhere, probably issue with external dependencies? |
 | Controller  | Missing  | Missing  | Missing  | - |
-| esminiLib  | Missing  | Missing  | Missing  | The internal methods were used by applications, it seems to be more than a shared library! |
-| esminiRMLib  | Missing  | Missing  | Missing  |  The internal methods were used by applications, it seems to be more than a shared library! |
+| esminiLib  | Done  | Missing  | Missing  | The internal methods were used by applications, it seems to be more than a shared library! |
+| esminiRMLib  | Done  | Missing  | Missing  |  The internal methods were used by applications, it seems to be more than a shared library! |
 
 ```bash
 git clone --recursive https://github.com/ebadi/esmini-pybind11
