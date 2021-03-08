@@ -1,0 +1,924 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EsminiLib &#8212; pyesmini 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="EsminiRMlib" href="pyesminirmlib.html" />
+    <link rel="prev" title="Controller" href="pycontroller.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pyesminilib">
+<span id="esminilib"></span><h1>EsminiLib<a class="headerlink" href="#module-pyesminilib" title="Permalink to this headline">¶</a></h1>
+<p>pyesminilib module</p>
+<dl class="py function">
+<dt id="pyesminilib.SE_AddObjectSensor">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_AddObjectSensor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rangeNear</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rangeFar</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">fovH</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxObj</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_AddObjectSensor" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Create an ideal object sensor and attach to specified vehicle</p>
+</div></blockquote>
+<p>Handle to the object to which the sensor should be attached</p>
+<p>Position x coordinate of the sensor in vehicle local coordinates</p>
+<p>Position y coordinate of the sensor in vehicle local coordinates</p>
+<p>Position z coordinate of the sensor in vehicle local coordinates</p>
+<p>heading of the sensor in vehicle local coordinates</p>
+<p>Horizontal field of view, in degrees</p>
+<p>Near value of the sensor depth range</p>
+<p>Far value of the sensor depth range</p>
+<p>Maximum number of objects theat the sensor can track</p>
+<p>Sensor ID (Global index of sensor), -1 if unsucessful</p>
+</div></blockquote>
+<p>C++: SE_AddObjectSensor(int, float, float, float, float, float, float, float, int) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_AddPath">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_AddPath</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_AddPath" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Add a search path for OpenDRIVE and 3D model files</p>
+</div></blockquote>
+<p>Path to a directory</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: SE_AddPath(const char <a href="#id1"><span class="problematic" id="id2">*</span></a>) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_ClearOSIGroundTruth">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_ClearOSIGroundTruth</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_ClearOSIGroundTruth" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>The SE_ClearOSIGroundTruth clears the certain groundtruth data</p>
+</div></blockquote>
+<p>C++: SE_ClearOSIGroundTruth() –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_ClearPaths">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_ClearPaths</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyesminilib.SE_ClearPaths" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Clear all search paths for OpenDRIVE and 3D model files</p>
+</div></blockquote>
+<p>C++: SE_ClearPaths() –&gt; void</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_Close">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_Close</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyesminilib.SE_Close" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Stop simulation gracefully. Two purposes: 1. Release memory and 2. Prepare for next simulation, e.g. reset object lists.</p>
+</div></blockquote>
+<p>C++: SE_Close() –&gt; void</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_DisableOSIFile">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_DisableOSIFile</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyesminilib.SE_DisableOSIFile" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Switch off logging to OSI file(s)</p>
+</div></blockquote>
+<p>C++: SE_DisableOSIFile() –&gt; void</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_EnableOSIFile">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_EnableOSIFile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyesminilib.SE_EnableOSIFile" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Switch on logging to OSI file(s)</p>
+</div></blockquote>
+<p>Optional filename, including path. Set to 0 or “” to use default.</p>
+</div></blockquote>
+<p>C++: SE_EnableOSIFile(const char <a href="#id3"><span class="problematic" id="id4">*</span></a>) –&gt; void</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_FetchSensorObjectList">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_FetchSensorObjectList</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sensor_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_FetchSensorObjectList" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Fetch list of identified objects from a sensor</p>
+</div></blockquote>
+<p>Handle (index) to the sensor</p>
+<p>Array of object indices</p>
+<p>Number of identified objects, i.e. length of list. -1 if unsuccesful.</p>
+</div></blockquote>
+<p>C++: SE_FetchSensorObjectList(int, int <a href="#id5"><span class="problematic" id="id6">*</span></a>) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_GetNumberOfObjects">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetNumberOfObjects</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_GetNumberOfObjects" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the number of entities in the current scenario</p>
+</div></blockquote>
+<p>Number of entities</p>
+</div></blockquote>
+<p>C++: SE_GetNumberOfObjects() –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_GetNumberOfRoadSigns">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetNumberOfRoadSigns</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">road_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_GetNumberOfRoadSigns" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the number of road signs along specified road</p>
+</div></blockquote>
+<p>The road along which to look for signs</p>
+<p>Number of road signs</p>
+</div></blockquote>
+<p>C++: SE_GetNumberOfRoadSigns(int) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_GetODRFilename">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetODRFilename</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><a class="headerlink" href="#pyesminilib.SE_GetODRFilename" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get name of currently referred and loaded OpenDRIVE file</p>
+</div></blockquote>
+<p>filename as string (const, since it’s allocated and handled by esmini)</p>
+</div></blockquote>
+<p>C++: SE_GetODRFilename() –&gt; const char *</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_GetODRManager">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetODRManager</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">capsule</span><a class="headerlink" href="#pyesminilib.SE_GetODRManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: SE_GetODRManager() –&gt; void *</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_GetOSIGroundTruth">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetOSIGroundTruth</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><a class="headerlink" href="#pyesminilib.SE_GetOSIGroundTruth" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>The SE_GetOSIGroundTruth function returns a char array containing the osi GroundTruth serialized to a string</p>
+</div></blockquote>
+<p>C++: SE_GetOSIGroundTruth(int <a href="#id7"><span class="problematic" id="id8">*</span></a>) –&gt; const char *</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_GetOSIGroundTruthRaw">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetOSIGroundTruthRaw</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><a class="headerlink" href="#pyesminilib.SE_GetOSIGroundTruthRaw" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>The SE_GetOSIGroundTruthRaw function returns a char array containing the OSI GroundTruth information</p>
+</div></blockquote>
+<p>osi3::GroundTruth*</p>
+</div></blockquote>
+<p>C++: SE_GetOSIGroundTruthRaw() –&gt; const char *</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_GetOSILaneBoundary">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetOSILaneBoundary</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><a class="headerlink" href="#pyesminilib.SE_GetOSILaneBoundary" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>The SE_GetOSIRoadLane function returns a char array containing the osi Lane Boundary information/message with the specified GLOBAL id</p>
+</div></blockquote>
+<p>C++: SE_GetOSILaneBoundary(int <a href="#id9"><span class="problematic" id="id10">*</span></a>, int) –&gt; const char *</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_GetOSIRoadLane">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetOSIRoadLane</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><a class="headerlink" href="#pyesminilib.SE_GetOSIRoadLane" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>The SE_GetOSIRoadLane function returns a char array containing the osi Lane information/message of the lane where the object with object_id is, serialized to a string</p>
+</div></blockquote>
+<p>C++: SE_GetOSIRoadLane(int <a href="#id11"><span class="problematic" id="id12">*</span></a>, int) –&gt; const char *</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_GetOSISensorDataRaw">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetOSISensorDataRaw</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><a class="headerlink" href="#pyesminilib.SE_GetOSISensorDataRaw" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>The SE_GetOSISensorDataRaw function returns a char array containing the OSI SensorData information</p>
+</div></blockquote>
+<p>osi3::SensorData*</p>
+</div></blockquote>
+<p>C++: SE_GetOSISensorDataRaw() –&gt; const char *</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_GetObjectName">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetObjectName</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><a class="headerlink" href="#pyesminilib.SE_GetObjectName" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the name of specified object</p>
+</div></blockquote>
+<p>Index of the object. Note: not ID</p>
+<p>Name</p>
+</div></blockquote>
+<p>C++: SE_GetObjectName(int) –&gt; const char *</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_GetQuitFlag">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetQuitFlag</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_GetQuitFlag" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Get the bool value of the end of the scenario</p>
+</div></blockquote>
+<p>C++: SE_GetQuitFlag() –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_GetSceneGraphFilename">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetSceneGraphFilename</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><a class="headerlink" href="#pyesminilib.SE_GetSceneGraphFilename" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get name of currently referred and loaded SceneGraph file</p>
+</div></blockquote>
+<p>filename as string (const, since it’s allocated and handled by esmini)</p>
+</div></blockquote>
+<p>C++: SE_GetSceneGraphFilename() –&gt; const char *</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_GetSimTimeStep">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetSimTimeStep</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a><a class="headerlink" href="#pyesminilib.SE_GetSimTimeStep" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Get simulation time step in seconds
+The time step is calculated as difference since last call to same funtion.
+Clamped to some reasonable values. First call returns smallest delta (typically 1 ms).</p>
+</div></blockquote>
+<p>C++: SE_GetSimTimeStep() –&gt; float</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_GetSimulationTime">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetSimulationTime</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a><a class="headerlink" href="#pyesminilib.SE_GetSimulationTime" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Get simulation time in seconds</p>
+</div></blockquote>
+<p>C++: SE_GetSimulationTime() –&gt; float</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_Init">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_Init</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oscFilename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_ctrls</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_viewer</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">threads</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_Init" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Initialize the scenario engine</p>
+</div></blockquote>
+<p>Path to the OpenSCEANRIO file</p>
+<p>1=Any controller will be disabled 0=Controllers applied according to OSC file</p>
+<p>0=no viewer, 1=use viewer</p>
+<p>0=single thread, 1=viewer in a separate thread, parallel to scenario engine</p>
+<p>Create recording for later playback 0=no recording 1=recording</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: SE_Init(const char <a href="#id13"><span class="problematic" id="id14">*</span></a>, int, int, int, int) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_InitWithString">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_InitWithString</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oscAsXMLString</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_ctrls</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_viewer</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">threads</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">record</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_InitWithString" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Initialize the scenario engine</p>
+</div></blockquote>
+<p>OpenSCENARIO XML as string</p>
+<p>1=Any controller will be disabled 0=Controllers applied according to OSC file</p>
+<p>0=no viewer, 1=use viewer</p>
+<p>0=single thread, 1=viewer in a separate thread, parallel to scenario engine</p>
+<p>Create recording for later playback 0=no recording 1=recording</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: SE_InitWithString(const char <a href="#id15"><span class="problematic" id="id16">*</span></a>, int, int, int, int) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_LogMessage">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_LogMessage</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyesminilib.SE_LogMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: SE_LogMessage(char <a href="#id17"><span class="problematic" id="id18">*</span></a>) –&gt; void</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_LogToConsole">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_LogToConsole</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyesminilib.SE_LogToConsole" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Enable or disable log to stdout/console</p>
+</div></blockquote>
+<p>true=enable, false=disable</p>
+</div></blockquote>
+<p>C++: SE_LogToConsole(bool) –&gt; void</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_OSIFileOpen">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_OSIFileOpen</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#pyesminilib.SE_OSIFileOpen" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Create and open osi file</p>
+</div></blockquote>
+<p>C++: SE_OSIFileOpen(const char <a href="#id19"><span class="problematic" id="id20">*</span></a>) –&gt; bool</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_OSIFileWrite">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_OSIFileWrite</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyesminilib.SE_OSIFileWrite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p>SE_OSIFileWrite() -&gt; bool</p></li>
+<li><p>SE_OSIFileWrite(flush: bool) -&gt; bool</p>
+<blockquote>
+<div><p>Create and open osi file</p>
+</div></blockquote>
+</li>
+</ol>
+<p>C++: SE_OSIFileWrite(bool) –&gt; bool</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_ObjectHasGhost">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_ObjectHasGhost</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_ObjectHasGhost" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Check whether an object has a ghost (special purpose lead vehicle)</p>
+</div></blockquote>
+<p>Index of the object. Note: not ID</p>
+<p>1 if ghost, 0 if not</p>
+</div></blockquote>
+<p>C++: SE_ObjectHasGhost(int) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_OpenOSISocket">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_OpenOSISocket</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ipaddr</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_OpenOSISocket" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Send OSI packages over UDP to specified IP address</p>
+</div></blockquote>
+<p>C++: SE_OpenOSISocket(const char <a href="#id21"><span class="problematic" id="id22">*</span></a>) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_ReportObjectLateralLanePosition">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_ReportObjectLateralLanePosition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">laneId</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">laneOffset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_ReportObjectLateralLanePosition" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Report object lateral position by lane id and lane offset. Useful for an external lateral controller.</p>
+</div></blockquote>
+<p>Id of the object</p>
+<p>Id of the lane</p>
+<p>Lateral offset from center of specified lane</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: SE_ReportObjectLateralLanePosition(int, int, float) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_ReportObjectLateralPosition">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_ReportObjectLateralPosition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_ReportObjectLateralPosition" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Report object lateral position relative road centerline. Useful for an external lateral controller.</p>
+</div></blockquote>
+<p>Id of the object</p>
+<p>Lateral position</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: SE_ReportObjectLateralPosition(int, float) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_ReportObjectPos">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_ReportObjectPos</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_ReportObjectPos" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Report object position in cartesian coordinates</p>
+</div></blockquote>
+<p>Id of the object</p>
+<p>Timestamp (not really used yet, OK to set 0)</p>
+<p>X coordinate</p>
+<p>Y coordinate</p>
+<p>Z coordinate</p>
+<p>Heading / yaw</p>
+<p>Pitch</p>
+<p>Roll</p>
+<p>Speed in forward direction of the enitity</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: SE_ReportObjectPos(int, float, float, float, float, float, float, float, float) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_ReportObjectPosXYH">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_ReportObjectPosXYH</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_ReportObjectPosXYH" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Report object position in limited set of cartesian coordinates x, y and heading,
+the remaining z, pitch and roll will be aligned to the road surface</p>
+</div></blockquote>
+<p>Id of the object</p>
+<p>Timestamp (not really used yet, OK to set 0)</p>
+<p>X coordinate</p>
+<p>Y coordinate</p>
+<p>Heading / yaw</p>
+<p>Speed in forward direction of the enitity</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: SE_ReportObjectPosXYH(int, float, float, float, float, float) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_ReportObjectRoadPos">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_ReportObjectRoadPos</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">roadId</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">laneId</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">laneOffset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_ReportObjectRoadPos" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Report object position in road coordinates</p>
+</div></blockquote>
+<p>Id of the object</p>
+<p>Timestamp (not really used yet, OK to set 0)</p>
+<p>Id of the road</p>
+<p>Id of the lane</p>
+<p>Lateral offset from center of specified lane</p>
+<p>Longitudinal distance of the position along the specified road</p>
+<p>Speed in forward direction (s axis) of the enitity</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: SE_ReportObjectRoadPos(int, float, int, int, float, float, float) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_ReportObjectSpeed">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_ReportObjectSpeed</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_ReportObjectSpeed" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Report object longitudinal speed. Useful for an external longitudinal controller.</p>
+</div></blockquote>
+<p>Id of the object</p>
+<p>Speed in forward direction of the enitity</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: SE_ReportObjectSpeed(int, float) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_SetOSITolerances">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_SetOSITolerances</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">maxLongitudinalDistance</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxLateralDeviation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_SetOSITolerances" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Configure tolerances/resolution for OSI road features</p>
+</div></blockquote>
+<p>Maximum distance between OSI points, even on straight road. Default=50(m)</p>
+<p>Control resolution w.r.t. curvature default=0.05(m)</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: SE_SetOSITolerances(double, double) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_SimpleVehicleControlAnalog">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_SimpleVehicleControlAnalog</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handleSimpleVehicle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">capsule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">throttle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">steering</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyesminilib.SE_SimpleVehicleControlAnalog" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Control the speed and steering with floaing values in the range [-1, 1], suitable for driver models.
+The function also steps the vehicle model, updating its position according to motion state and timestep.</p>
+</div></blockquote>
+<p>timesStep (s)</p>
+<p>Longitudinal control, -1: maximum brake, 0: no acceleration, +1: maximum acceleration</p>
+<p>Lateral control, -1: max left, 0: straight, 1: max right</p>
+</div></blockquote>
+<p>C++: SE_SimpleVehicleControlAnalog(void <a href="#id23"><span class="problematic" id="id24">*</span></a>, double, double, double) –&gt; void</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_SimpleVehicleControlBinary">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_SimpleVehicleControlBinary</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handleSimpleVehicle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">capsule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">throttle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">steering</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyesminilib.SE_SimpleVehicleControlBinary" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Control the speed and steering with discreet [-1, 0, 1] values, suitable for keyboard control (e.g. up/none/down).
+The function also steps the vehicle model, updating its position according to motion state and timestep.</p>
+</div></blockquote>
+<p>timesStep (s)</p>
+<p>Longitudinal control, -1: brake, 0: none, +1: accelerate</p>
+<p>Lateral control, -1: left, 0: straight, 1: right</p>
+</div></blockquote>
+<p>C++: SE_SimpleVehicleControlBinary(void <a href="#id25"><span class="problematic" id="id26">*</span></a>, double, int, int) –&gt; void</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_SimpleVehicleCreate">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_SimpleVehicleCreate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">capsule</span><a class="headerlink" href="#pyesminilib.SE_SimpleVehicleCreate" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Create an instance of a simplistic vehicle based on a 2D bicycle kincematic model</p>
+</div></blockquote>
+<p>Initial position X world coordinate</p>
+<p>Initial position Y world coordinate</p>
+<p>Initial heading</p>
+<p>Length of the vehicle</p>
+<p>Handle to the created object</p>
+</div></blockquote>
+<p>C++: SE_SimpleVehicleCreate(float, float, float, float) –&gt; void *</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_SimpleVehicleDelete">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_SimpleVehicleDelete</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handleSimpleVehicle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">capsule</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyesminilib.SE_SimpleVehicleDelete" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Delete an instance of the simplistic vehicle model</p>
+</div></blockquote>
+<p>C++: SE_SimpleVehicleDelete(void <a href="#id27"><span class="problematic" id="id28">*</span></a>) –&gt; void</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_SimpleVehicleSetMaxSpeed">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_SimpleVehicleSetMaxSpeed</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handleSimpleVehicle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">capsule</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyesminilib.SE_SimpleVehicleSetMaxSpeed" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Set maximum vehicle speed.</p>
+</div></blockquote>
+<p>Maximum speed (m/s)</p>
+</div></blockquote>
+<p>C++: SE_SimpleVehicleSetMaxSpeed(void <a href="#id29"><span class="problematic" id="id30">*</span></a>, float) –&gt; void</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_Step">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_Step</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_Step" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Step the simulation forward. Time step will be elapsed system (world) time since last step. Useful for interactive/realtime use cases.</p>
+</div></blockquote>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: SE_Step() –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_StepDT">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_StepDT</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_StepDT" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Step the simulation forward with specified timestep</p>
+</div></blockquote>
+<p>time step in seconds</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: SE_StepDT(float) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_UpdateOSIDynamicGroundTruth">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_UpdateOSIDynamicGroundTruth</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_UpdateOSIDynamicGroundTruth" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>The SE_UpdateOSIDynamicGroundTruth function returns a char array containing the osi dynamic GroundTruth serialized to a string</p>
+</div></blockquote>
+<p>C++: SE_UpdateOSIDynamicGroundTruth() –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_UpdateOSIGroundTruth">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_UpdateOSIGroundTruth</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_UpdateOSIGroundTruth" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>The SE_UpdateOSIGroundTruth function calls SE_UpdateOSIStaticGroundTruth and SE_UpdateOSIDynamicGroundTruth</p>
+</div></blockquote>
+<p>C++: SE_UpdateOSIGroundTruth() –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_UpdateOSIStaticGroundTruth">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_UpdateOSIStaticGroundTruth</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminilib.SE_UpdateOSIStaticGroundTruth" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>The SE_UpdateOSIStaticGroundTruth function returns a char array containing the osi static GroundTruth serialized to a string</p>
+</div></blockquote>
+<p>C++: SE_UpdateOSIStaticGroundTruth() –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminilib.SE_ViewerShowFeature">
+<code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_ViewerShowFeature</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">featureType</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyesminilib.SE_ViewerShowFeature" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>The SE_GetOSILaneBoundaryIds function the global ids for left, far elft, right and far right lane boundaries</p>
+</div></blockquote>
+<p>Type of the features, see viewer::NodeMask typedef</p>
+<p>Set true to show features, false to hide</p>
+</div></blockquote>
+<p>C++: SE_ViewerShowFeature(int, bool) –&gt; void</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id0">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_AddObjectSensor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rangeNear</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rangeFar</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">fovH</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxObj</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Create an ideal object sensor and attach to specified vehicle</p>
+</div></blockquote>
+<p>Handle to the object to which the sensor should be attached</p>
+<p>Position x coordinate of the sensor in vehicle local coordinates</p>
+<p>Position y coordinate of the sensor in vehicle local coordinates</p>
+<p>Position z coordinate of the sensor in vehicle local coordinates</p>
+<p>heading of the sensor in vehicle local coordinates</p>
+<p>Horizontal field of view, in degrees</p>
+<p>Near value of the sensor depth range</p>
+<p>Far value of the sensor depth range</p>
+<p>Maximum number of objects theat the sensor can track</p>
+<p>Sensor ID (Global index of sensor), -1 if unsucessful</p>
+</div></blockquote>
+<p>C++: SE_AddObjectSensor(int, float, float, float, float, float, float, float, int) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id31">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_AddPath</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id31" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Add a search path for OpenDRIVE and 3D model files</p>
+</div></blockquote>
+<p>Path to a directory</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: SE_AddPath(const char <a href="#id32"><span class="problematic" id="id33">*</span></a>) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id34">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_ClearOSIGroundTruth</span></code> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id34" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>The SE_ClearOSIGroundTruth clears the certain groundtruth data</p>
+</div></blockquote>
+<p>C++: SE_ClearOSIGroundTruth() –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id35">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_ClearPaths</span></code> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#id35" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Clear all search paths for OpenDRIVE and 3D model files</p>
+</div></blockquote>
+<p>C++: SE_ClearPaths() –&gt; void</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id36">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_Close</span></code> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#id36" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Stop simulation gracefully. Two purposes: 1. Release memory and 2. Prepare for next simulation, e.g. reset object lists.</p>
+</div></blockquote>
+<p>C++: SE_Close() –&gt; void</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id37">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_DisableOSIFile</span></code> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#id37" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Switch off logging to OSI file(s)</p>
+</div></blockquote>
+<p>C++: SE_DisableOSIFile() –&gt; void</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id38">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_EnableOSIFile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#id38" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Switch on logging to OSI file(s)</p>
+</div></blockquote>
+<p>Optional filename, including path. Set to 0 or “” to use default.</p>
+</div></blockquote>
+<p>C++: SE_EnableOSIFile(const char <a href="#id39"><span class="problematic" id="id40">*</span></a>) –&gt; void</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id41">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_FetchSensorObjectList</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sensor_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id41" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Fetch list of identified objects from a sensor</p>
+</div></blockquote>
+<p>Handle (index) to the sensor</p>
+<p>Array of object indices</p>
+<p>Number of identified objects, i.e. length of list. -1 if unsuccesful.</p>
+</div></blockquote>
+<p>C++: SE_FetchSensorObjectList(int, int <a href="#id42"><span class="problematic" id="id43">*</span></a>) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id44">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetNumberOfObjects</span></code> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id44" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the number of entities in the current scenario</p>
+</div></blockquote>
+<p>Number of entities</p>
+</div></blockquote>
+<p>C++: SE_GetNumberOfObjects() –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id45">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetNumberOfRoadSigns</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">road_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id45" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the number of road signs along specified road</p>
+</div></blockquote>
+<p>The road along which to look for signs</p>
+<p>Number of road signs</p>
+</div></blockquote>
+<p>C++: SE_GetNumberOfRoadSigns(int) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id46">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetODRFilename</span></code> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><a class="headerlink" href="#id46" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get name of currently referred and loaded OpenDRIVE file</p>
+</div></blockquote>
+<p>filename as string (const, since it’s allocated and handled by esmini)</p>
+</div></blockquote>
+<p>C++: SE_GetODRFilename() –&gt; const char *</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id47">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetODRManager</span></code> &#x2192; <span class="pre">capsule</span><a class="headerlink" href="#id47" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: SE_GetODRManager() –&gt; void *</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id48">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetOSIGroundTruth</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><a class="headerlink" href="#id48" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>The SE_GetOSIGroundTruth function returns a char array containing the osi GroundTruth serialized to a string</p>
+</div></blockquote>
+<p>C++: SE_GetOSIGroundTruth(int <a href="#id49"><span class="problematic" id="id50">*</span></a>) –&gt; const char *</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id51">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetOSIGroundTruthRaw</span></code> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><a class="headerlink" href="#id51" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>The SE_GetOSIGroundTruthRaw function returns a char array containing the OSI GroundTruth information</p>
+</div></blockquote>
+<p>osi3::GroundTruth*</p>
+</div></blockquote>
+<p>C++: SE_GetOSIGroundTruthRaw() –&gt; const char *</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id52">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetOSILaneBoundary</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><a class="headerlink" href="#id52" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>The SE_GetOSIRoadLane function returns a char array containing the osi Lane Boundary information/message with the specified GLOBAL id</p>
+</div></blockquote>
+<p>C++: SE_GetOSILaneBoundary(int <a href="#id53"><span class="problematic" id="id54">*</span></a>, int) –&gt; const char *</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id55">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetOSIRoadLane</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><a class="headerlink" href="#id55" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>The SE_GetOSIRoadLane function returns a char array containing the osi Lane information/message of the lane where the object with object_id is, serialized to a string</p>
+</div></blockquote>
+<p>C++: SE_GetOSIRoadLane(int <a href="#id56"><span class="problematic" id="id57">*</span></a>, int) –&gt; const char *</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id58">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminilib.</span></code><code class="sig-name descname"><span class="pre">SE_GetOSISensorDataRaw</span></code> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a><a class="headerlink" href="#id58" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>The SE_GetOSISensorDataRaw function returns a char array containing the OSI SensorData information</p>
+</div></blockquote>
+<p>osi3::SensorData*</p>
+</div></blockquote>
+<p>C++: SE_GetOSISensorDataRaw() –&gt; const char *</p>
+</dd></dl>
+
+<hr class="docutils" />
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">pyesmini</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyroadmanager.html">Road Manager</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyscenarioengine.html">Scenario Engine</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyviewerbase.html">Viewer base</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyplayerbase.html">Player base</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pycontroller.html">Controller</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">EsminiLib</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyesminirmlib.html">EsminiRMlib</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="pycontroller.html" title="previous chapter">Controller</a></li>
+      <li>Next: <a href="pyesminirmlib.html" title="next chapter">EsminiRMlib</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Hamid Ebadi.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/pyesminilib.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

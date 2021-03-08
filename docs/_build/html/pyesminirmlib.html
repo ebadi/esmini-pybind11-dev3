@@ -1,0 +1,563 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EsminiRMlib &#8212; pyesmini 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="EsminiLib" href="pyesminilib.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pyesminirmlib">
+<span id="esminirmlib"></span><h1>EsminiRMlib<a class="headerlink" href="#module-pyesminirmlib" title="Permalink to this headline">¶</a></h1>
+<p>pyesminirmlib module</p>
+<dl class="py function">
+<dt id="pyesminirmlib.RM_Close">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_Close</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminirmlib.RM_Close" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: RM_Close() –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_CreatePosition">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_CreatePosition</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminirmlib.RM_CreatePosition" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Create a position object</p>
+</div></blockquote>
+<p>Handle to the position object, to use for operations</p>
+</div></blockquote>
+<p>C++: RM_CreatePosition() –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_DeletePosition">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_DeletePosition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminirmlib.RM_DeletePosition" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Delete one or all position object(s)</p>
+</div></blockquote>
+<p>Handle to the position object. Set -1 to delete all.</p>
+<p>0 if succesful, -1 if specified position(s) could not be deleted</p>
+</div></blockquote>
+<p>C++: RM_DeletePosition(int) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_GetIdOfRoadFromIndex">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_GetIdOfRoadFromIndex</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminirmlib.RM_GetIdOfRoadFromIndex" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the Road ID of the road with specified index. E.g. if there are 4 roads, index 3 means the last one.</p>
+</div></blockquote>
+<p>The index of the road</p>
+<p>The ID of the road</p>
+</div></blockquote>
+<p>C++: RM_GetIdOfRoadFromIndex(int) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_GetLaneIdByIndex">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_GetLaneIdByIndex</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">roadId</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">laneIndex</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminirmlib.RM_GetLaneIdByIndex" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the ID of the lane given by index</p>
+</div></blockquote>
+<p>The road ID</p>
+<p>The index of the lane</p>
+<p>The distance along the road at what point to look up the lane ID</p>
+<p>The lane ID</p>
+</div></blockquote>
+<p>C++: RM_GetLaneIdByIndex(int, int, float) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_GetNrOfPositions">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_GetNrOfPositions</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminirmlib.RM_GetNrOfPositions" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the number of created position objects</p>
+</div></blockquote>
+<p>Number of created position objects</p>
+</div></blockquote>
+<p>C++: RM_GetNrOfPositions() –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_GetNumberOfRoads">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_GetNumberOfRoads</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminirmlib.RM_GetNumberOfRoads" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the total number fo roads in the road network of the currently loaded OpenDRIVE file.</p>
+</div></blockquote>
+<p>Number of roads</p>
+</div></blockquote>
+<p>C++: RM_GetNumberOfRoads() –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_GetRoadLength">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_GetRoadLength</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a><a class="headerlink" href="#pyesminirmlib.RM_GetRoadLength" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the lenght of road with specified ID</p>
+</div></blockquote>
+<p>The road ID</p>
+<p>The length of the road if ID exists, else 0.0</p>
+</div></blockquote>
+<p>C++: RM_GetRoadLength(int) –&gt; float</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_GetRoadNumberOfLanes">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_GetRoadNumberOfLanes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">roadId</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminirmlib.RM_GetRoadNumberOfLanes" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the number of drivable lanes of specified road</p>
+</div></blockquote>
+<p>The road ID</p>
+<p>The distance along the road at what point to check number of lanes (which can vary along the road)</p>
+<p>The number of drivable lanes</p>
+</div></blockquote>
+<p>C++: RM_GetRoadNumberOfLanes(int, float) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_GetSpeedLimit">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_GetSpeedLimit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a><a class="headerlink" href="#pyesminirmlib.RM_GetSpeedLimit" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Retrieve current speed limit (at current road, s-value and lane) based on ODR type elements or nr of lanes</p>
+</div></blockquote>
+<p>Handle to the position object</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: RM_GetSpeedLimit(int) –&gt; float</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_Init">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_Init</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">odrFilename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminirmlib.RM_Init" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: RM_Init(const char <a href="#id1"><span class="problematic" id="id2">*</span></a>) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_PositionMoveForward">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_PositionMoveForward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminirmlib.RM_PositionMoveForward" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Move position forward along the road. Choose way randomly though any junctions.</p>
+</div></blockquote>
+<p>Handle to the position object</p>
+<p>Distance (meter) to move</p>
+<p>How to move in a junction where multiple route options appear, see Junction::JunctionStrategyType</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: RM_PositionMoveForward(int, float, int) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_SetLanePosition">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_SetLanePosition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">roadId</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">laneId</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">laneOffset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">align</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminirmlib.RM_SetLanePosition" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Set position from road coordinates, world coordinates being calculated</p>
+</div></blockquote>
+<p>Handle to the position object</p>
+<p>Road specifier</p>
+<p>Lane specifier</p>
+<p>Offset from lane center</p>
+<p>Distance along the specified road</p>
+<p>If true the heading will be reset to the lane driving direction (typically only at initialization)</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: RM_SetLanePosition(int, int, int, float, float, bool) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_SetS">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_SetS</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminirmlib.RM_SetS" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Set s (distance) part of a lane position, world coordinates being calculated</p>
+</div></blockquote>
+<p>Handle to the position object</p>
+<p>Distance along the specified road</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: RM_SetS(int, float) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_SetWorldPosition">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_SetWorldPosition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminirmlib.RM_SetWorldPosition" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Set position from world coordinates, road coordinates being calculated</p>
+</div></blockquote>
+<p>Handle to the position object</p>
+<p>cartesian coordinate x value</p>
+<p>cartesian coordinate y value</p>
+<p>cartesian coordinate z value</p>
+<p>rotation heading value</p>
+<p>rotation pitch value</p>
+<p>rotation roll value</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: RM_SetWorldPosition(int, float, float, float, float, float, float) –&gt; int</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pyesminirmlib.RM_SetWorldXYHPosition">
+<code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_SetWorldXYHPosition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyesminirmlib.RM_SetWorldXYHPosition" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Set position from world X, Y and heading coordinates; Z, pitch and road coordinates being calculated</p>
+</div></blockquote>
+<p>Handle to the position object</p>
+<p>cartesian coordinate x value</p>
+<p>cartesian coordinate y value</p>
+<p>rotation heading value</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: RM_SetWorldXYHPosition(int, float, float, float) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id0">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_Close</span></code> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: RM_Close() –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id3">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_CreatePosition</span></code> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Create a position object</p>
+</div></blockquote>
+<p>Handle to the position object, to use for operations</p>
+</div></blockquote>
+<p>C++: RM_CreatePosition() –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id4">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_DeletePosition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Delete one or all position object(s)</p>
+</div></blockquote>
+<p>Handle to the position object. Set -1 to delete all.</p>
+<p>0 if succesful, -1 if specified position(s) could not be deleted</p>
+</div></blockquote>
+<p>C++: RM_DeletePosition(int) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id5">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_GetIdOfRoadFromIndex</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the Road ID of the road with specified index. E.g. if there are 4 roads, index 3 means the last one.</p>
+</div></blockquote>
+<p>The index of the road</p>
+<p>The ID of the road</p>
+</div></blockquote>
+<p>C++: RM_GetIdOfRoadFromIndex(int) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id6">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_GetLaneIdByIndex</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">roadId</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">laneIndex</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the ID of the lane given by index</p>
+</div></blockquote>
+<p>The road ID</p>
+<p>The index of the lane</p>
+<p>The distance along the road at what point to look up the lane ID</p>
+<p>The lane ID</p>
+</div></blockquote>
+<p>C++: RM_GetLaneIdByIndex(int, int, float) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id7">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_GetNrOfPositions</span></code> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id7" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the number of created position objects</p>
+</div></blockquote>
+<p>Number of created position objects</p>
+</div></blockquote>
+<p>C++: RM_GetNrOfPositions() –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id8">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_GetNumberOfRoads</span></code> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id8" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the total number fo roads in the road network of the currently loaded OpenDRIVE file.</p>
+</div></blockquote>
+<p>Number of roads</p>
+</div></blockquote>
+<p>C++: RM_GetNumberOfRoads() –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id9">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_GetRoadLength</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a><a class="headerlink" href="#id9" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the lenght of road with specified ID</p>
+</div></blockquote>
+<p>The road ID</p>
+<p>The length of the road if ID exists, else 0.0</p>
+</div></blockquote>
+<p>C++: RM_GetRoadLength(int) –&gt; float</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id10">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_GetRoadNumberOfLanes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">roadId</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id10" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Get the number of drivable lanes of specified road</p>
+</div></blockquote>
+<p>The road ID</p>
+<p>The distance along the road at what point to check number of lanes (which can vary along the road)</p>
+<p>The number of drivable lanes</p>
+</div></blockquote>
+<p>C++: RM_GetRoadNumberOfLanes(int, float) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id11">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_GetSpeedLimit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a><a class="headerlink" href="#id11" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Retrieve current speed limit (at current road, s-value and lane) based on ODR type elements or nr of lanes</p>
+</div></blockquote>
+<p>Handle to the position object</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: RM_GetSpeedLimit(int) –&gt; float</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id12">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_Init</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">odrFilename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id12" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: RM_Init(const char <a href="#id13"><span class="problematic" id="id14">*</span></a>) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id15">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_PositionMoveForward</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id15" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Move position forward along the road. Choose way randomly though any junctions.</p>
+</div></blockquote>
+<p>Handle to the position object</p>
+<p>Distance (meter) to move</p>
+<p>How to move in a junction where multiple route options appear, see Junction::JunctionStrategyType</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: RM_PositionMoveForward(int, float, int) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id16">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_SetLanePosition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">roadId</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">laneId</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">laneOffset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">align</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id16" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Set position from road coordinates, world coordinates being calculated</p>
+</div></blockquote>
+<p>Handle to the position object</p>
+<p>Road specifier</p>
+<p>Lane specifier</p>
+<p>Offset from lane center</p>
+<p>Distance along the specified road</p>
+<p>If true the heading will be reset to the lane driving direction (typically only at initialization)</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: RM_SetLanePosition(int, int, int, float, float, bool) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id17">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_SetS</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id17" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Set s (distance) part of a lane position, world coordinates being calculated</p>
+</div></blockquote>
+<p>Handle to the position object</p>
+<p>Distance along the specified road</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: RM_SetS(int, float) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id18">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_SetWorldPosition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id18" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Set position from world coordinates, road coordinates being calculated</p>
+</div></blockquote>
+<p>Handle to the position object</p>
+<p>cartesian coordinate x value</p>
+<p>cartesian coordinate y value</p>
+<p>cartesian coordinate z value</p>
+<p>rotation heading value</p>
+<p>rotation pitch value</p>
+<p>rotation roll value</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: RM_SetWorldPosition(int, float, float, float, float, float, float) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="id19">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyesminirmlib.</span></code><code class="sig-name descname"><span class="pre">RM_SetWorldXYHPosition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">handle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#id19" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div><p>Set position from world X, Y and heading coordinates; Z, pitch and road coordinates being calculated</p>
+</div></blockquote>
+<p>Handle to the position object</p>
+<p>cartesian coordinate x value</p>
+<p>cartesian coordinate y value</p>
+<p>rotation heading value</p>
+<p>0 if successful, -1 if not</p>
+</div></blockquote>
+<p>C++: RM_SetWorldXYHPosition(int, float, float, float) –&gt; int</p>
+</dd></dl>
+
+<hr class="docutils" />
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">pyesmini</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyroadmanager.html">Road Manager</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyscenarioengine.html">Scenario Engine</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyviewerbase.html">Viewer base</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyplayerbase.html">Player base</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pycontroller.html">Controller</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyesminilib.html">EsminiLib</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">EsminiRMlib</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="pyesminilib.html" title="previous chapter">EsminiLib</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Hamid Ebadi.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/pyesminirmlib.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

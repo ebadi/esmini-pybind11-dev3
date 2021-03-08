@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viewer base &#8212; pyesmini 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Player base" href="pyplayerbase.html" />
+    <link rel="prev" title="Scenario Engine" href="pyscenarioengine.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pyviewerbase.viewer">
+<span id="viewer-base"></span><h1>Viewer base<a class="headerlink" href="#module-pyviewerbase.viewer" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for ::viewer namespace</p>
+<hr class="docutils" />
+<dl class="py class">
+<dt id="pyviewerbase.viewer.AlphaFadingCallback">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyviewerbase.viewer.</span></code><code class="sig-name descname"><span class="pre">AlphaFadingCallback</span></code><a class="headerlink" href="#pyviewerbase.viewer.AlphaFadingCallback" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="pyviewerbase.viewer.AlphaFadingCallback.Reset">
+<code class="sig-name descname"><span class="pre">Reset</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.AlphaFadingCallback" title="pyviewerbase.viewer.AlphaFadingCallback"><span class="pre">pyviewerbase.viewer.AlphaFadingCallback</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.AlphaFadingCallback.Reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::AlphaFadingCallback::Reset() –&gt; void</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="pyviewerbase.viewer.CarModel">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyviewerbase.viewer.</span></code><code class="sig-name descname"><span class="pre">CarModel</span></code><a class="headerlink" href="#pyviewerbase.viewer.CarModel" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="pyviewerbase.viewer.CarModel.GetType">
+<code class="sig-name descname"><span class="pre">GetType</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.CarModel" title="pyviewerbase.viewer.CarModel"><span class="pre">pyviewerbase.viewer.CarModel</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyviewerbase.viewer.CarModel.GetType" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::CarModel::GetType() –&gt; int</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.CarModel.UpdateWheels">
+<code class="sig-name descname"><span class="pre">UpdateWheels</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.CarModel" title="pyviewerbase.viewer.CarModel"><span class="pre">pyviewerbase.viewer.CarModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">wheel_angle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">wheel_rotation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.CarModel.UpdateWheels" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::CarModel::UpdateWheels(double, double) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.CarModel.UpdateWheelsDelta">
+<code class="sig-name descname"><span class="pre">UpdateWheelsDelta</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.CarModel" title="pyviewerbase.viewer.CarModel"><span class="pre">pyviewerbase.viewer.CarModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">wheel_angle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">wheel_rotation_delta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.CarModel.UpdateWheelsDelta" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::CarModel::UpdateWheelsDelta(double, double) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.CarModel.assign">
+<code class="sig-name descname"><span class="pre">assign</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pyviewerbase.viewer.CarModel</span></em>, <em class="sig-param"><span class="pre">:</span> <span class="pre">pyviewerbase.viewer.CarModel</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#pyviewerbase.viewer.CarModel" title="pyviewerbase.viewer.CarModel"><span class="pre">pyviewerbase.viewer.CarModel</span></a><a class="headerlink" href="#pyviewerbase.viewer.CarModel.assign" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::CarModel::operator=(const class viewer::CarModel &amp;) –&gt; class viewer::CarModel &amp;</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="pyviewerbase.viewer.EntityModel">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyviewerbase.viewer.</span></code><code class="sig-name descname"><span class="pre">EntityModel</span></code><a class="headerlink" href="#pyviewerbase.viewer.EntityModel" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="pyviewerbase.viewer.EntityModel.GetType">
+<code class="sig-name descname"><span class="pre">GetType</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.EntityModel" title="pyviewerbase.viewer.EntityModel"><span class="pre">pyviewerbase.viewer.EntityModel</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyviewerbase.viewer.EntityModel.GetType" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::EntityModel::GetType() –&gt; int</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.EntityModel.SetPosition">
+<code class="sig-name descname"><span class="pre">SetPosition</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.EntityModel" title="pyviewerbase.viewer.EntityModel"><span class="pre">pyviewerbase.viewer.EntityModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.EntityModel.SetPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::EntityModel::SetPosition(double, double, double) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.EntityModel.SetRotation">
+<code class="sig-name descname"><span class="pre">SetRotation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.EntityModel" title="pyviewerbase.viewer.EntityModel"><span class="pre">pyviewerbase.viewer.EntityModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.EntityModel.SetRotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::EntityModel::SetRotation(double, double, double) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.EntityModel.SetTransparency">
+<code class="sig-name descname"><span class="pre">SetTransparency</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.EntityModel" title="pyviewerbase.viewer.EntityModel"><span class="pre">pyviewerbase.viewer.EntityModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.EntityModel.SetTransparency" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::EntityModel::SetTransparency(double) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.EntityModel.assign">
+<code class="sig-name descname"><span class="pre">assign</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">self:</span> <span class="pre">pyviewerbase.viewer.EntityModel</span></em>, <em class="sig-param"><span class="pre">:</span> <span class="pre">pyviewerbase.viewer.EntityModel</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#pyviewerbase.viewer.EntityModel" title="pyviewerbase.viewer.EntityModel"><span class="pre">pyviewerbase.viewer.EntityModel</span></a><a class="headerlink" href="#pyviewerbase.viewer.EntityModel.assign" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::EntityModel::operator=(const class viewer::EntityModel &amp;) –&gt; class viewer::EntityModel &amp;</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="pyviewerbase.viewer.Line">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyviewerbase.viewer.</span></code><code class="sig-name descname"><span class="pre">Line</span></code><a class="headerlink" href="#pyviewerbase.viewer.Line" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="pyviewerbase.viewer.Line.SetPoints">
+<code class="sig-name descname"><span class="pre">SetPoints</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Line" title="pyviewerbase.viewer.Line"><span class="pre">pyviewerbase.viewer.Line</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">z0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">z1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Line.SetPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Line::SetPoints(double, double, double, double, double, double) –&gt; void</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="pyviewerbase.viewer.PointSensor">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyviewerbase.viewer.</span></code><code class="sig-name descname"><span class="pre">PointSensor</span></code><a class="headerlink" href="#pyviewerbase.viewer.PointSensor" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="pyviewerbase.viewer.PointSensor.Hide">
+<code class="sig-name descname"><span class="pre">Hide</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.PointSensor" title="pyviewerbase.viewer.PointSensor"><span class="pre">pyviewerbase.viewer.PointSensor</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.PointSensor.Hide" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::PointSensor::Hide() –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.PointSensor.Show">
+<code class="sig-name descname"><span class="pre">Show</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.PointSensor" title="pyviewerbase.viewer.PointSensor"><span class="pre">pyviewerbase.viewer.PointSensor</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.PointSensor.Show" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::PointSensor::Show() –&gt; void</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="pyviewerbase.viewer.SensorViewFrustum">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyviewerbase.viewer.</span></code><code class="sig-name descname"><span class="pre">SensorViewFrustum</span></code><a class="headerlink" href="#pyviewerbase.viewer.SensorViewFrustum" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="pyviewerbase.viewer.SensorViewFrustum.Update">
+<code class="sig-name descname"><span class="pre">Update</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.SensorViewFrustum" title="pyviewerbase.viewer.SensorViewFrustum"><span class="pre">pyviewerbase.viewer.SensorViewFrustum</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.SensorViewFrustum.Update" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::SensorViewFrustum::Update() –&gt; void</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="pyviewerbase.viewer.Trail">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyviewerbase.viewer.</span></code><code class="sig-name descname"><span class="pre">Trail</span></code><a class="headerlink" href="#pyviewerbase.viewer.Trail" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="pyviewerbase.viewer.Trail.AddDot">
+<code class="sig-name descname"><span class="pre">AddDot</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Trail" title="pyviewerbase.viewer.Trail"><span class="pre">pyviewerbase.viewer.Trail</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">heading</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Trail.AddDot" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Trail::AddDot(double, double, double, double) –&gt; void</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="pyviewerbase.viewer.TrailDot">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyviewerbase.viewer.</span></code><code class="sig-name descname"><span class="pre">TrailDot</span></code><a class="headerlink" href="#pyviewerbase.viewer.TrailDot" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="pyviewerbase.viewer.TrailDot.Reset">
+<code class="sig-name descname"><span class="pre">Reset</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.TrailDot" title="pyviewerbase.viewer.TrailDot"><span class="pre">pyviewerbase.viewer.TrailDot</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">heading</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.TrailDot.Reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::TrailDot::Reset(double, double, double, double) –&gt; void</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="pyviewerbase.viewer.Viewer">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyviewerbase.viewer.</span></code><code class="sig-name descname"><span class="pre">Viewer</span></code><a class="headerlink" href="#pyviewerbase.viewer.Viewer" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.AddEnvironment">
+<code class="sig-name descname"><span class="pre">AddEnvironment</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.AddEnvironment" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::AddEnvironment(const char <a href="#id1"><span class="problematic" id="id2">*</span></a>) –&gt; int</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.ClearNodeMaskBits">
+<code class="sig-name descname"><span class="pre">ClearNodeMaskBits</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bits</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.ClearNodeMaskBits" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::ClearNodeMaskBits(int) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.CreateRoadSensors">
+<code class="sig-name descname"><span class="pre">CreateRoadSensors</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">vehicle_model</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.CarModel" title="pyviewerbase.viewer.CarModel"><span class="pre">pyviewerbase.viewer.CarModel</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.CreateRoadSensors" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::CreateRoadSensors(class viewer::CarModel <a href="#id3"><span class="problematic" id="id4">*</span></a>) –&gt; bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.GetEntityInFocus">
+<code class="sig-name descname"><span class="pre">GetEntityInFocus</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.GetEntityInFocus" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::GetEntityInFocus() –&gt; int</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.GetNodeMaskBit">
+<code class="sig-name descname"><span class="pre">GetNodeMaskBit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.GetNodeMaskBit" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::GetNodeMaskBit(int) –&gt; int</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.GetQuitRequest">
+<code class="sig-name descname"><span class="pre">GetQuitRequest</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.GetQuitRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::GetQuitRequest() –&gt; bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.SensorSetPivotPos">
+<code class="sig-name descname"><span class="pre">SensorSetPivotPos</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.PointSensor" title="pyviewerbase.viewer.PointSensor"><span class="pre">pyviewerbase.viewer.PointSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.SensorSetPivotPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::SensorSetPivotPos(class viewer::PointSensor <a href="#id5"><span class="problematic" id="id6">*</span></a>, double, double, double) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.SensorSetTargetPos">
+<code class="sig-name descname"><span class="pre">SensorSetTargetPos</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.PointSensor" title="pyviewerbase.viewer.PointSensor"><span class="pre">pyviewerbase.viewer.PointSensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.SensorSetTargetPos" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::SensorSetTargetPos(class viewer::PointSensor <a href="#id7"><span class="problematic" id="id8">*</span></a>, double, double, double) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.SetCameraMode">
+<code class="sig-name descname"><span class="pre">SetCameraMode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.SetCameraMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::SetCameraMode(int) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.SetInfoText">
+<code class="sig-name descname"><span class="pre">SetInfoText</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.SetInfoText" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::SetInfoText(const char <a href="#id9"><span class="problematic" id="id10">*</span></a>) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.SetInfoTextProjection">
+<code class="sig-name descname"><span class="pre">SetInfoTextProjection</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.SetInfoTextProjection" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::SetInfoTextProjection(int, int) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.SetNodeMaskBits">
+<code class="sig-name descname"><span class="pre">SetNodeMaskBits</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyviewerbase.viewer.Viewer.SetNodeMaskBits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>SetNodeMaskBits(self: pyviewerbase.viewer.Viewer, bits: int) -&gt; None</p></li>
+</ol>
+<p>C++: viewer::Viewer::SetNodeMaskBits(int) –&gt; void</p>
+<ol class="arabic simple" start="2">
+<li><p>SetNodeMaskBits(self: pyviewerbase.viewer.Viewer, mask: int, bits: int) -&gt; None</p></li>
+</ol>
+<p>C++: viewer::Viewer::SetNodeMaskBits(int, int) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.SetQuitRequest">
+<code class="sig-name descname"><span class="pre">SetQuitRequest</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.SetQuitRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::SetQuitRequest(bool) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.SetVehicleInFocus">
+<code class="sig-name descname"><span class="pre">SetVehicleInFocus</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.SetVehicleInFocus" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::SetVehicleInFocus(int) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.ShowInfoText">
+<code class="sig-name descname"><span class="pre">ShowInfoText</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.ShowInfoText" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::ShowInfoText(bool) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.ToggleNodeMaskBits">
+<code class="sig-name descname"><span class="pre">ToggleNodeMaskBits</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bits</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.ToggleNodeMaskBits" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::ToggleNodeMaskBits(int) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.UpdateSensor">
+<code class="sig-name descname"><span class="pre">UpdateSensor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensor</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.PointSensor" title="pyviewerbase.viewer.PointSensor"><span class="pre">pyviewerbase.viewer.PointSensor</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.UpdateSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::UpdateSensor(class viewer::PointSensor <a href="#id11"><span class="problematic" id="id12">*</span></a>) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.getKeyDown">
+<code class="sig-name descname"><span class="pre">getKeyDown</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.getKeyDown" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::getKeyDown() –&gt; bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.getKeyLeft">
+<code class="sig-name descname"><span class="pre">getKeyLeft</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.getKeyLeft" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::getKeyLeft() –&gt; bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.getKeyRight">
+<code class="sig-name descname"><span class="pre">getKeyRight</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.getKeyRight" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::getKeyRight() –&gt; bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.getKeyUp">
+<code class="sig-name descname"><span class="pre">getKeyUp</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.getKeyUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::getKeyUp() –&gt; bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.setKeyDown">
+<code class="sig-name descname"><span class="pre">setKeyDown</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pressed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.setKeyDown" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::setKeyDown(bool) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.setKeyLeft">
+<code class="sig-name descname"><span class="pre">setKeyLeft</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pressed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.setKeyLeft" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::setKeyLeft(bool) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.setKeyRight">
+<code class="sig-name descname"><span class="pre">setKeyRight</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pressed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.setKeyRight" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::setKeyRight(bool) –&gt; void</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pyviewerbase.viewer.Viewer.setKeyUp">
+<code class="sig-name descname"><span class="pre">setKeyUp</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#pyviewerbase.viewer.Viewer" title="pyviewerbase.viewer.Viewer"><span class="pre">pyviewerbase.viewer.Viewer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pressed</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><span class="pre">None</span></a><a class="headerlink" href="#pyviewerbase.viewer.Viewer.setKeyUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>C++: viewer::Viewer::setKeyUp(bool) –&gt; void</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="pyviewerbase.viewer.ViewerEventHandler">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyviewerbase.viewer.</span></code><code class="sig-name descname"><span class="pre">ViewerEventHandler</span></code><a class="headerlink" href="#pyviewerbase.viewer.ViewerEventHandler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="pyviewerbase.viewer.VisibilityCallback">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">pyviewerbase.viewer.</span></code><code class="sig-name descname"><span class="pre">VisibilityCallback</span></code><a class="headerlink" href="#pyviewerbase.viewer.VisibilityCallback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">pyesmini</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyroadmanager.html">Road Manager</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyscenarioengine.html">Scenario Engine</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Viewer base</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyplayerbase.html">Player base</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pycontroller.html">Controller</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="esminilib.html">EsminiLib</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="esminirmlib.html">EsminiRMlib</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="pyscenarioengine.html" title="previous chapter">Scenario Engine</a></li>
+      <li>Next: <a href="pyplayerbase.html" title="next chapter">Player base</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Hamid Ebadi.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/pyviewerbase.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
