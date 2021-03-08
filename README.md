@@ -27,7 +27,7 @@ pyplayerbase.ScenarioPlayer misses many methods!
 | RoadManager  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyroadmanager.html) | Missing  | Problems with LaneRoadMarkType::Print(), IsIndirectlyConnected |
 | ScenarioEngine  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyscenarioengine.html)  | Missing  | - |
 | PlayerBase  | **Incomplete**  | Missing  | Missing  | Not all methods were covered  |
-| ViewerBase  | Error  | Missing  | Missing  | Error everywhere, probably issue with external dependencies? |
+| ViewerBase  | **Done**  | Missing  | Missing  | check if all classes are included |
 | Controller  | Missing  | Missing  | Missing  | - |
 | esminiLib  | **Done**  | Missing  | Missing  | The internal methods were used by applications, it seems to be more than a shared library! |
 | esminiRMLib  | **Done**  | Missing  | Missing  |  The internal methods were used by applications, it seems to be more than a shared library! |

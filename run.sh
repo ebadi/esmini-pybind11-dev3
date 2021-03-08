@@ -32,6 +32,10 @@ MYMODULE=viewerbase
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
 /home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind viewer --single-file  --config $MYMODULE.cfg  $PWD/src/$MYMODULE.hpp  -- -std=c++17 -DNDEBUG $IPATHS
 
+MYMODULE=controller
+rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
+/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind scenarioengine --single-file  --config $MYMODULE.cfg  $PWD/src/x$MYMODULE.hpp  -- -std=c++17 -DNDEBUG $IPATHS
+
 
 
 
@@ -45,6 +49,8 @@ python3 -c "import pyplayerbase; print(dir(pyplayerbase.ScenarioPlayer));"
 python3 -c "import pyesminilib; print(dir(pyesminilib));"
 python3 -c "import pyesminirmlib; print(dir(pyesminirmlib));"
 python3 -c "import pyviewerbase; print(dir(pyviewerbase.viewer));"
+python3 -c "import pycontroller; print(dir(pycontroller));"
+python3 -c "import pycontroller; print(dir(pycontroller.scenarioengine));"
 #pip3 install -U sphinx
 cd docs
 make html
