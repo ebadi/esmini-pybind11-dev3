@@ -26,11 +26,11 @@ pyplayerbase.ScenarioPlayer misses many methods!
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | RoadManager  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyroadmanager.html) | Missing  | Problems with LaneRoadMarkType::Print(), IsIndirectlyConnected |
 | ScenarioEngine  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyscenarioengine.html)  | Missing  | - |
-| PlayerBase  | **Incomplete**  | Missing  | Missing  | Not all methods were covered  |
-| ViewerBase  | **Done**  | Missing  | Missing  | check if all classes are included |
-| Controller  | Missing  | Missing  | Missing  | - |
-| esminiLib  | **Done**  | Missing  | Missing  | The internal methods were used by applications, it seems to be more than a shared library! |
-| esminiRMLib  | **Done**  | Missing  | Missing  |  The internal methods were used by applications, it seems to be more than a shared library! |
+| PlayerBase  | **Incomplete**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyscenarioengine.html)  | Missing  | Not all methods were covered  |
+| ViewerBase  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyscenarioengine.html)  | Missing  | check if all classes/methods are included |
+| Controller  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pycontroller.html)  | Missing  | check if all classes/methods are included |
+| esminiLib  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyesminilib.html)  | Missing  | The internal methods were used by applications, it seems to be more than a shared library! |
+| esminiRMLib  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyesminirmlib.html)  | Missing  |  The internal methods were used by applications, it seems to be more than a shared library! |
 
 ```bash
 git clone --recursive https://github.com/ebadi/esmini-pybind11
