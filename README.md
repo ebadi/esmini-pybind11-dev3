@@ -8,7 +8,7 @@
 * CMake >= 3.4 or Pip 10+
 * Ninja or Pip 10+
 
-**On Windows**
+**On Windows** 
 
 * Visual Studio 2015 or newer (required for all Python versions, see notes below)
 * CMake >= 3.8 (3.8 was the first version to support VS 2015) or Pip 10+
@@ -20,17 +20,21 @@ Just clone this repository and pip install. Note the `--recursive` option which 
 needed for the pybind11 submodule:
 
 ## Progress
-pyplayerbase.ScenarioPlayer misses many methods!
 
-| Module  | pyBind11  | documentation | Testcase |   Comment | 
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| RoadManager  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyroadmanager.html) | Missing  | Problems with LaneRoadMarkType::Print(), IsIndirectlyConnected |
-| ScenarioEngine  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyscenarioengine.html)  | Missing  | - |
-| PlayerBase  | **Done** (incomplete) | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyplayerbase.html)  | Missing  | Not all methods were covered  |
-| ViewerBase  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyviewerbase.html)  | Missing  | check if all classes/methods are included |
-| Controller  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pycontroller.html)  | Missing  | check if all classes/methods are included |
-| esminiLib  | **Done** (incomplete) | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyesminilib.html)  | Missing  | Missing SE_InitWithArgs. [python3: malloc.c:2379: sysmalloc](tests/esmini.py)  |
-| esminiRMLib  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyesminirmlib.html)  | Missing  |  The internal methods were used by applications, it seems to be more than a shared library! |
+| Module  | pyBind11  | documentation |   Comment | 
+| ------------- | ------------- | ------------- | ------------- |
+| RoadManager  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyroadmanager.html) | Problems with LaneRoadMarkType::Print(), IsIndirectlyConnected |
+| ScenarioEngine  | **Done**  (incomplete) | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyscenarioengine.html)  | Not all methods are covered |
+| PlayerBase  | **Done** (incomplete) | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyplayerbase.html)  | Not all methods are covered  |
+| ViewerBase  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyviewerbase.html)  | check if all classes/methods are included |
+| Controller  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pycontroller.html)  | check if all classes/methods are included |
+| esminiLib  | **Done** (incomplete) | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyesminilib.html)  | Missing SE_InitWithArgs. [python3: malloc.c:2379: sysmalloc](tests/esmini.py)  |
+| esminiRMLib  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyesminirmlib.html)  |  The internal methods were used by applications, it seems to be more than a shared library! |
+
+- Missing methods: **Highest priority**
+- Testing on Linux : Done
+- Testing on Windows: **Not Done**
+- Testcases for each method: **Not Done**
 
 ```bash
 git clone --recursive https://github.com/ebadi/esmini-pybind11
@@ -44,7 +48,6 @@ cmake --build . --config Release --target install
 cd ../../
 
 ./run.sh
-
 ```
 
 ```
@@ -60,12 +63,13 @@ python3 -c "import pyplayerbase; print(dir(pyplayerbase.ScenarioPlayer));"
 from pyroadmanager.roadmanager import *
 g = Geometry(1,2,3,4,5, Geometry.GEOMETRY_TYPE_UNKNOWN )
 print(g.GetHdg()) # prints 4.0
-
 ```
 
 ## Important Links
 https://github.com/RosettaCommons/binder
+
 https://github.com/MRPT/mvsim/tree/master/modules/comms
+
 https://github.com/vgteam/libbdsg/tree/master/bdsg/cmake_bindings
 
 With the `setup.py` file included in this example, the `pip install` command will
