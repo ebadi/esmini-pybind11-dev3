@@ -26,10 +26,10 @@ pyplayerbase.ScenarioPlayer misses many methods!
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | RoadManager  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyroadmanager.html) | Missing  | Problems with LaneRoadMarkType::Print(), IsIndirectlyConnected |
 | ScenarioEngine  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyscenarioengine.html)  | Missing  | - |
-| PlayerBase  | **Incomplete**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyplayerbase.html)  | Missing  | Not all methods were covered  |
+| PlayerBase  | **Done** (incomplete) | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyplayerbase.html)  | Missing  | Not all methods were covered  |
 | ViewerBase  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyviewerbase.html)  | Missing  | check if all classes/methods are included |
 | Controller  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pycontroller.html)  | Missing  | check if all classes/methods are included |
-| esminiLib  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyesminilib.html)  | Missing  | `python3 -c "import pyesminilib; s = '/home/wave/repositories/esmini-pybind11/esmini/resources/xosc/lane_change.xosc' ; a= pyesminilib.SE_Init(s, 1, 1, 0, 0);"  ---> python3: malloc.c:2379: sysmalloc: Assertion ` . Missing SE_InitWithArgs |
+| esminiLib  | **Done** (incomplete) | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyesminilib.html)  | Missing  | Missing SE_InitWithArgs. [python3: malloc.c:2379: sysmalloc](tests/esmini.py)  |
 | esminiRMLib  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyesminirmlib.html)  | Missing  |  The internal methods were used by applications, it seems to be more than a shared library! |
 
 ```bash
