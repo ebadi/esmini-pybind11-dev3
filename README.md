@@ -65,9 +65,7 @@ print(g.GetHdg()) # prints 4.0
 
 ## Important Links
 https://github.com/RosettaCommons/binder
-
 https://github.com/MRPT/mvsim/tree/master/modules/comms
-
 https://github.com/vgteam/libbdsg/tree/master/bdsg/cmake_bindings
 
 With the `setup.py` file included in this example, the `pip install` command will
