@@ -3,7 +3,7 @@
 import pyesminilib
 from pyesminilib import *
 fn = '/home/wave/repositories/esmini-pybind11/esmini/resources/xosc/lane_change.xosc'
-pyesminilib.SE_Init(fn,1,1,0,0)
+pyesminilib.SE_Init(fn,1,0,0,0)
 
 """
 esmini GIT REV: 06f0360

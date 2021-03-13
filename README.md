@@ -17,7 +17,12 @@
 ## Installation
 
 Just clone this repository and pip install. Note the `--recursive` option which is
-needed for the pybind11 submodule:
+needed for the pybind11 submodule and then run the following command:
+
+
+```bash
+./run-without-rebuilding-bindings.sh
+```
 
 ## Progress
 
@@ -36,19 +41,6 @@ needed for the pybind11 submodule:
 - Testing on Windows: **Not Done**
 - Testcases for each method: **Not Done**
 
-```bash
-git clone --recursive https://github.com/ebadi/esmini-pybind11
-cd ./esmini-pybind11
-git clone https://github.com/ebadi/esmini
-cd esmini
-mkdir build
-cd build
-cmake ../ -DUSE_OSG=true -DCMAKE_BUILD_TYPE=Release
-cmake --build . --config Release --target install
-cd ../../
-
-./run.sh
-```
 
 ```
 python3 -c "import pyroadmanager.roadmanager; print(dir(pyroadmanager.roadmanager));"
