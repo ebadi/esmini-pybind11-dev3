@@ -21,6 +21,3 @@ python3 -c "import pycontroller; print(dir(pycontroller.scenarioengine));"
 python3 -c "import pyesminilib; print(dir(pyesminilib));"
 python3 -c "import pyesminirmlib; print(dir(pyesminirmlib));"
 
-#pip3 install -U sphinx
-cd docs
-make html
