@@ -12,12 +12,5 @@ export LD_LIBRARY_PATH=$PWD/esmini/bin
 
 pip3 install . ;
 
-python3 -c "import pyroadmanager.roadmanager; print(dir(pyroadmanager.roadmanager));"
-python3 -c "import pyscenarioengine.scenarioengine; print(dir(pyscenarioengine.scenarioengine));"
-python3 -c "import pyplayerbase; print(dir(pyplayerbase.ScenarioPlayer));"
-python3 -c "import pyviewerbase; print(dir(pyviewerbase.viewer));"
-python3 -c "import pycontroller; print(dir(pycontroller.scenarioengine));"
 
-python3 -c "import pyesminilib; print(dir(pyesminilib));"
-python3 -c "import pyesminirmlib; print(dir(pyesminirmlib));"
 

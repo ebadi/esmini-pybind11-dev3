@@ -19,9 +19,13 @@
 Just clone this repository and pip install. Note the `--recursive` option which is
 needed for the pybind11 submodule and then run the following command:
 
-
+#### Fast installation without rebuilding the bindings
+```
+./prod-without-rebuilding-bindings.sh
+```
+#### Dev build, rebuilding the bindings
 ```bash
-./run-without-rebuilding-bindings.sh
+./dev-building-bindings.sh
 ```
 
 ## Progress
@@ -35,6 +39,12 @@ needed for the pybind11 submodule and then run the following command:
 | Controller  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pycontroller.html)  | check if all classes/methods are included |
 | esminiLib  | **Done** (incomplete) | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyesminilib.html)  | Missing SE_InitWithArgs. [python3: malloc.c:2379: sysmalloc](tests/esmini.py)  |
 | esminiRMLib  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyesminirmlib.html)  |  The internal methods were used by applications, it seems to be more than a shared library! |
+
+
+### Issues 
+[As explained here](https://github.com/RosettaCommons/binder/issues/151), not all C/C++ types could be adequately represented in Python. Particularly functions that take/produce `char *argv[]` could not be bound in Python without creating special wrapper. This is something that will require human attention to resolve. Usually such function rewritten in manner that made them more Python friendly. For instance function that you mention might be rewritten as one that takes single `std::vector<std::string> const &` argument.
+
+Esmini Answer: We've tried to stick with basic C data types to simplify DLL usage. Maybe it would be possible to use C++ std-types as well, but would need some investigation and testing on a few platforms.
 
 - Missing methods: **Highest priority**
 - Testing on Linux : Done
@@ -56,6 +66,7 @@ from pyroadmanager.roadmanager import *
 g = Geometry(1,2,3,4,5, Geometry.GEOMETRY_TYPE_UNKNOWN )
 print(g.GetHdg()) # prints 4.0
 ```
+
 
 ## Important Links
 https://github.com/RosettaCommons/binder
