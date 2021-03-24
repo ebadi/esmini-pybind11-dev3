@@ -45,5 +45,5 @@ python3 -c "import pyesminilib; print(dir(pyesminilib));"
 python3 -c "import pyesminirmlib; print(dir(pyesminirmlib));"
 
 #pip3 install -U sphinx
-cd docs
-make html
+# cd docs
+# make html

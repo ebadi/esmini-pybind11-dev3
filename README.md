@@ -15,7 +15,10 @@
 
 
 ## Installation
-
+```
+git clone https://github.com/ebadi/esmini-pybind11.git  --recursive
+cd esmini-pybind11/
+```
 Just clone this repository and pip install. Note the `--recursive` option which is
 needed for the pybind11 submodule and then run the following command:
 
