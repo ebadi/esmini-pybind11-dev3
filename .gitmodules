@@ -4,4 +4,4 @@
 	branch = master
 [submodule "esmini"]
 	path = esmini
-	url = https://github.com/ebadi/esmini
+	url = https://github.com/ebadi/esmini.git

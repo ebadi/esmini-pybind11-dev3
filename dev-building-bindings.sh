@@ -4,34 +4,34 @@ export LD_LIBRARY_PATH=$PWD/esmini/bin
 
 MYMODULE=roadmanager
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
-/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind $MYMODULE  --single-file   --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++17 -DNDEBUG $IPATHS
+/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind $MYMODULE  --single-file   --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++14 -DNDEBUG $IPATHS
 ## This overwrites our modified version of src/roadmanager/pyroadmanager.cpp
 git diff src/roadmanager/pyroadmanager.cpp
 git checkout src/roadmanager/pyroadmanager.cpp
 
 MYMODULE=scenarioengine
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
-/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind $MYMODULE  --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++17 -DNDEBUG $IPATHS
+/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind $MYMODULE  --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++14 -DNDEBUG $IPATHS
 
 MYMODULE=playerbase
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
-/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind $MYMODULE  --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++17 -DNDEBUG $IPATHS
+/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind $MYMODULE  --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++14 -DNDEBUG $IPATHS
 
 MYMODULE=viewerbase
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
-/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind viewer --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++17 -DNDEBUG $IPATHS
+/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind viewer --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++14 -DNDEBUG $IPATHS
 
 MYMODULE=controller
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
-/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind scenarioengine --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++17 -DNDEBUG $IPATHS
+/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind scenarioengine --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++14 -DNDEBUG $IPATHS
 
 MYMODULE=esminilib
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
-/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind "" --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++17 -DNDEBUG $IPATHS
+/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind "" --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++14 -DNDEBUG $IPATHS
 
 MYMODULE=esminirmlib
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
-/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind "" --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++17 -DNDEBUG $IPATHS
+/home/wave/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind "" --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++14 -DNDEBUG $IPATHS
 
 pip3 install . ;
 

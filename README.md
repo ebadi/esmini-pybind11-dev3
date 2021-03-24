@@ -13,7 +13,10 @@
 * Visual Studio 2015 or newer (required for all Python versions, see notes below)
 * CMake >= 3.8 (3.8 was the first version to support VS 2015) or Pip 10+
 
-
+## Build inside the Docker 
+``
+docker build -t esmini/docker-ubuntu .
+```
 ## Installation
 ```
 git clone https://github.com/ebadi/esmini-pybind11.git  --recursive
@@ -27,7 +30,7 @@ needed for the pybind11 submodule and then run the following command:
 ./prod-without-rebuilding-bindings.sh
 ```
 #### Dev build, rebuilding the bindings
-```bash
+```
 ./dev-building-bindings.sh
 ```
 
