@@ -4,8 +4,6 @@ add_subdirectory(pybind11)
 #python3 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())"
 #/usr/include/python3.8
 
-
-
 set(INCLUDE_DIRS
 ${CMAKE_CURRENT_SOURCE_DIR}/pybind11/include/
 /usr/include/python3.8
@@ -15,6 +13,7 @@ ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Libraries/esminiLib/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Libraries/esminiRMLib/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/pugixml/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/SUMO/linux/include/
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/OpenSceneGraph/linux/include/
 ${CMAKE_CURRENT_SOURCE_DIR}/src/
 ${CMAKE_CURRENT_SOURCE_DIR}/src/roadmanager/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ScenarioEngine/SourceFiles/
@@ -31,9 +30,9 @@ find_package(PythonLibs)
 include_directories(${PYTHON_INCLUDE_DIRS})
 link_libraries(
 -L${CMAKE_CURRENT_SOURCE_DIR}/esmini/bin/
--L{CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Libraries/esminiLib/
--L{CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Libraries/esminiRMLib/
--L{CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/
+-L${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Libraries/esminiLib/
+-L${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Libraries/esminiRMLib/
+-L${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/
 -L${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ViewerBase/
 -lesminiLib
 -lesminiRMLib

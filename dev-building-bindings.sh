@@ -1,19 +1,6 @@
 #!/bin/bash
 
-cd $PWD
-if [ ! -d "binder" ]
-then
-  # e1e4227
-  git clone https://github.com/RosettaCommons/binder.git
-  cd binder
-  cmake CMakeLists.txt -DCMAKE_INSTALL_PREFIX:PATH=~/binder/
-  make
-  make install
-fi
-
-
-cd $PWD
-IPATHS=" -Iesmini/externals/pugixml/ -Iesmini/EnvironmentSimulator/Modules/CommonMini/ -Iesmini/EnvironmentSimulator/Modules/RoadManager -Iesmini/EnvironmentSimulator/Modules/Controllers  -Iesmini/EnvironmentSimulator/Modules/PlayerBase -Iesmini/EnvironmentSimulator/Modules/ScenarioEngine/SourceFiles/  -Iesmini/EnvironmentSimulator/Modules/ScenarioEngine/OSCTypeDefs/ -Iesmini/EnvironmentSimulator/Modules/ViewerBase -Iesmini/EnvironmentSimulator/Libraries/esminiLib/  -Iesmini/EnvironmentSimulator/Libraries/esminiRMLib/ -I$PWD/esmini-pybind11/esmini/bin/ "
+IPATHS=" -Iesmini/externals/pugixml/ -Iesmini/EnvironmentSimulator/Modules/CommonMini/ -Iesmini/EnvironmentSimulator/Modules/RoadManager -Iesmini/EnvironmentSimulator/Modules/Controllers  -Iesmini/EnvironmentSimulator/Modules/PlayerBase -Iesmini/EnvironmentSimulator/Modules/ScenarioEngine/SourceFiles/  -Iesmini/EnvironmentSimulator/Modules/ScenarioEngine/OSCTypeDefs/ -Iesmini/EnvironmentSimulator/Modules/ViewerBase -Iesmini/EnvironmentSimulator/Libraries/esminiLib/  -Iesmini/EnvironmentSimulator/Libraries/esminiRMLib/ -Iesmini/bin/ -Iesmini/externals/OpenSceneGraph/linux/include/"
 export LD_LIBRARY_PATH=$PWD/esmini/bin
 
 MYMODULE=roadmanager
@@ -47,7 +34,7 @@ MYMODULE=esminirmlib
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
 ~/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind "" --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++17 -DNDEBUG $IPATHS
 
-cd $PWD
+
 pip3 install . ;
 
 python3 -c "import pyroadmanager.roadmanager; print(dir(pyroadmanager.roadmanager));"
@@ -63,5 +50,4 @@ python3 -c "import pyesminirmlib; print(dir(pyesminirmlib));"
 # cd docs
 # make html
 
-cd $PWD
-./prod-without-rebuilding-bindings.sh
+pip3 install . ;
