@@ -8,28 +8,34 @@
 * CMake >= 3.4 or Pip 10+
 * Ninja or Pip 10+
 
-**On Windows** 
+**On Windows**
 
 * Visual Studio 2015 or newer (required for all Python versions, see notes below)
 * CMake >= 3.8 (3.8 was the first version to support VS 2015) or Pip 10+
 
-## Build inside the Docker 
-``
+## Build inside the Docker
+
+```
 docker build -t esmini/docker-ubuntu .
 ```
 ## Installation
+
 ```
 git clone https://github.com/ebadi/esmini-pybind11.git  --recursive
 cd esmini-pybind11/
 ```
+
 Just clone this repository and pip install. Note the `--recursive` option which is
 needed for the pybind11 submodule and then run the following command:
 
 #### Fast installation without rebuilding the bindings
+
 ```
 ./prod-without-rebuilding-bindings.sh
 ```
+
 #### Dev build, rebuilding the bindings
+
 ```
 ./dev-building-bindings.sh
 ```
@@ -47,7 +53,7 @@ needed for the pybind11 submodule and then run the following command:
 | esminiRMLib  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyesminirmlib.html)  |  The internal methods were used by applications, it seems to be more than a shared library! |
 
 
-### Issues 
+### Issues
 [As explained here](https://github.com/RosettaCommons/binder/issues/151), not all C/C++ types could be adequately represented in Python. Particularly functions that take/produce `char *argv[]` could not be bound in Python without creating special wrapper. This is something that will require human attention to resolve. Usually such function rewritten in manner that made them more Python friendly. For instance function that you mention might be rewritten as one that takes single `std::vector<std::string> const &` argument.
 
 Esmini Answer: We've tried to stick with basic C data types to simplify DLL usage. Maybe it would be possible to use C++ std-types as well, but would need some investigation and testing on a few platforms.
