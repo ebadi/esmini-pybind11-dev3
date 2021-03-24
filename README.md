@@ -17,6 +17,10 @@
 
 ```
 docker build -t esmini/docker-ubuntu .
+docker stop $(docker ps -a | grep esmini/docker-ubuntu | cut -d" " -f1) 2>/dev/null
+docker rm $(docker ps -a | grep esmini/docker-ubuntu | cut -d" " -f1) 2>/dev/null
+docker run -it --rm esmini/docker-ubuntu || exit 1
+
 ```
 ## Installation
 

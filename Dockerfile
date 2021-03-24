@@ -15,5 +15,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install clang-10 llvm-10 libclang-10-dev llvm-10-dev cmake gcc
 
 
+RUN ls
+
 RUN git clone https://github.com/ebadi/esmini-pybind11.git  --recursive
 RUN cd esmini-pybind11/ ; ./dev-building-bindings.sh
