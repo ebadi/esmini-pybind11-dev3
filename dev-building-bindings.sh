@@ -1,5 +1,18 @@
 #!/bin/bash
 
+pip3 install pybind11
+echo "XXXXXXXXXXXXXXXXXXXXX"
+cd $PWD
+if [ ! -d "binder" ]
+then
+  # e1e4227
+  git clone https://github.com/RosettaCommons/binder.git
+  cd binder
+  cmake CMakeLists.txt -DCMAKE_INSTALL_PREFIX:PATH=~/binder/
+  make
+  make install
+fi
+
 cd $PWD
 if [ ! -d "binder" ]
 then

@@ -13,15 +13,6 @@
 * Visual Studio 2015 or newer (required for all Python versions, see notes below)
 * CMake >= 3.8 (3.8 was the first version to support VS 2015) or Pip 10+
 
-## Build inside the Docker
-
-```
-docker build -t esmini/docker-ubuntu .
-docker stop $(docker ps -a | grep esmini/docker-ubuntu | cut -d" " -f1) 2>/dev/null
-docker rm $(docker ps -a | grep esmini/docker-ubuntu | cut -d" " -f1) 2>/dev/null
-docker run -it --rm esmini/docker-ubuntu || exit 1
-
-```
 ## Installation
 
 ```
@@ -32,13 +23,23 @@ cd esmini-pybind11/
 Just clone this repository and pip install. Note the `--recursive` option which is
 needed for the pybind11 submodule and then run the following command:
 
-#### Fast installation without rebuilding the bindings
+
+#### Option 1: Build inside the Docker
+
+```
+docker build -t esmini/docker-ubuntu .
+docker stop $(docker ps -a | grep esmini/docker-ubuntu | cut -d" " -f1) 2>/dev/null
+docker rm $(docker ps -a | grep esmini/docker-ubuntu | cut -d" " -f1) 2>/dev/null
+docker run -it --rm esmini/docker-ubuntu || exit 1
+```
+
+#### Option 2: Fast installation without rebuilding the bindings
 
 ```
 ./prod-without-rebuilding-bindings.sh
 ```
 
-#### Dev build, rebuilding the bindings
+#### Option 3: Dev build, rebuilding the bindings
 
 ```
 ./dev-building-bindings.sh
