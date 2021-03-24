@@ -14,5 +14,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     python3-pip \
     python3.5-dev
 
+RUN ls
+
 RUN git clone https://github.com/ebadi/esmini-pybind11.git  --recursive
 RUN cd esmini-pybind11/ ; ./dev-building-bindings.sh
