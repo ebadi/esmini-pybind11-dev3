@@ -1,7 +1,5 @@
 #!/bin/bash
 
-pip3 install pybind11[global]
-
 cd $PWD
 if [ ! -d "binder" ]
 then
@@ -13,19 +11,9 @@ then
   make install
 fi
 
-cd $PWD
-if [ ! -d "esmini/build" ]
-then
-  cd esmini
-  mkdir build
-  cd build
-  cmake ../ -DUSE_OSG=true -DCMAKE_BUILD_TYPE=Release
-  cmake --build . --config Release --target install
-  cd ../../
-fi
 
 cd $PWD
-IPATHS=" -Iesmini/externals/pugixml/ -Iesmini/EnvironmentSimulator/Modules/CommonMini/ -Iesmini/EnvironmentSimulator/Modules/RoadManager   -Iesmini/EnvironmentSimulator/Modules/Controllers  -Iesmini/EnvironmentSimulator/Modules/PlayerBase -Iesmini/EnvironmentSimulator/Modules/ScenarioEngine/SourceFiles/  -Iesmini/EnvironmentSimulator/Modules/ScenarioEngine/OSCTypeDefs/ -Iesmini/EnvironmentSimulator/Modules/ViewerBase -Iesmini/EnvironmentSimulator/Libraries/esminiLib/  -Iesmini/EnvironmentSimulator/Libraries/esminiRMLib/ -I/home/wave/repositories/esmini-pybind11/esmini/bin/ "
+IPATHS=" -Iesmini/externals/pugixml/ -Iesmini/EnvironmentSimulator/Modules/CommonMini/ -Iesmini/EnvironmentSimulator/Modules/RoadManager -Iesmini/EnvironmentSimulator/Modules/Controllers  -Iesmini/EnvironmentSimulator/Modules/PlayerBase -Iesmini/EnvironmentSimulator/Modules/ScenarioEngine/SourceFiles/  -Iesmini/EnvironmentSimulator/Modules/ScenarioEngine/OSCTypeDefs/ -Iesmini/EnvironmentSimulator/Modules/ViewerBase -Iesmini/EnvironmentSimulator/Libraries/esminiLib/  -Iesmini/EnvironmentSimulator/Libraries/esminiRMLib/ -I$PWD/esmini-pybind11/esmini/bin/ "
 export LD_LIBRARY_PATH=$PWD/esmini/bin
 
 MYMODULE=roadmanager
@@ -74,3 +62,6 @@ python3 -c "import pyesminirmlib; print(dir(pyesminirmlib));"
 #pip3 install -U sphinx
 # cd docs
 # make html
+
+cd $PWD
+./prod-without-rebuilding-bindings.sh
