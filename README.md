@@ -29,7 +29,8 @@ needed for the pybind11 submodule and then run the following command:
 ```
 docker build -t esmini/docker-ubuntu .
 docker run -i -tt esmini/docker-ubuntu /bin/bash
-# export LD_LIBRARY_PATH=esmini-pybind11/esmini/bin
+root@c77d1e4ef709:/# export LD_LIBRARY_PATH=esmini-pybind11/esmini/bin
+root@c77d1e4ef709:/# python3 -c "import pyplayerbase; print(dir(pyplayerbase.ScenarioPlayer));"
 ```
 
 #### Option 2: Fast installation without rebuilding the bindings
