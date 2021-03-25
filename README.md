@@ -28,9 +28,8 @@ needed for the pybind11 submodule and then run the following command:
 
 ```
 docker build -t esmini/docker-ubuntu .
-docker stop $(docker ps -a | grep esmini/docker-ubuntu | cut -d" " -f1) 2>/dev/null
-docker rm $(docker ps -a | grep esmini/docker-ubuntu | cut -d" " -f1) 2>/dev/null
-docker run -it --rm esmini/docker-ubuntu || exit 1
+docker run -i -tt esmini/docker-ubuntu /bin/bash
+# export LD_LIBRARY_PATH=esmini-pybind11/esmini/bin
 ```
 
 #### Option 2: Fast installation without rebuilding the bindings

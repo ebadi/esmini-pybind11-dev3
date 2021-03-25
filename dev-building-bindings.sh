@@ -50,4 +50,3 @@ python3 -c "import pyesminirmlib; print(dir(pyesminirmlib));"
 # cd docs
 # make html
 
-pip3 install . ;
