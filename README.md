@@ -8,7 +8,7 @@
 * CMake >= 3.4 or Pip 10+
 * Ninja or Pip 10+
 
-**On Windows**
+**On Windows** (Not tested)
 
 * Visual Studio 2015 or newer (required for all Python versions, see notes below)
 * CMake >= 3.8 (3.8 was the first version to support VS 2015) or Pip 10+
@@ -21,7 +21,7 @@ cd esmini-pybind11/
 ```
 
 Just clone this repository and pip install. Note the `--recursive` option which is
-needed for the pybind11 submodule and then run the following command:
+needed for the pybind11 submodule and then choose one of the following three options :
 
 
 #### Option 1: Build inside the Docker
@@ -31,12 +31,14 @@ docker build -t esmini/docker-ubuntu .
 docker run -i -tt esmini/docker-ubuntu /bin/bash
 root@c77d1e4ef709:/# export LD_LIBRARY_PATH=esmini-pybind11/esmini/bin
 root@c77d1e4ef709:/# python3 -c "import pyplayerbase; print(dir(pyplayerbase.ScenarioPlayer));"
+root@c77d1e4ef709:/# python3 esmini-pybind11/tests/esmini.py
+root@c77d1e4ef709:/# cd esmini-pybind11 ; ./dev-building-bindings.sh
 ```
 
-#### Option 2: Fast installation without rebuilding the bindings
+#### Option 2: Prod build, using prebuilt bindings
 
 ```
-./prod-without-rebuilding-bindings.sh
+./prod-use-prebuilt-bindings.sh
 ```
 
 #### Option 3: Dev build, rebuilding the bindings

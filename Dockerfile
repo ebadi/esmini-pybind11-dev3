@@ -24,3 +24,5 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install libopenscenegraph-dev
 
 # RUN git clone https://github.com/ebadi/esmini-pybind11.git  --recursive
 RUN cd esmini-pybind11/ ; ./dev-building-bindings.sh
+
+RUN pip3 install -U sphinx

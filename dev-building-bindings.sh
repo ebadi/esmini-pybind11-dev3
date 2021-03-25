@@ -1,5 +1,6 @@
 #!/bin/bash
 
+./build_esmini.sh
 IPATHS=" -Iesmini/externals/pugixml/ -Iesmini/EnvironmentSimulator/Modules/CommonMini/ -Iesmini/EnvironmentSimulator/Modules/RoadManager -Iesmini/EnvironmentSimulator/Modules/Controllers  -Iesmini/EnvironmentSimulator/Modules/PlayerBase -Iesmini/EnvironmentSimulator/Modules/ScenarioEngine/SourceFiles/  -Iesmini/EnvironmentSimulator/Modules/ScenarioEngine/OSCTypeDefs/ -Iesmini/EnvironmentSimulator/Modules/ViewerBase -Iesmini/EnvironmentSimulator/Libraries/esminiLib/  -Iesmini/EnvironmentSimulator/Libraries/esminiRMLib/ -Iesmini/bin/ -Iesmini/externals/OpenSceneGraph/linux/include/"
 export LD_LIBRARY_PATH=$PWD/esmini/bin
 
@@ -46,7 +47,7 @@ python3 -c "import pycontroller; print(dir(pycontroller.scenarioengine));"
 python3 -c "import pyesminilib; print(dir(pyesminilib));"
 python3 -c "import pyesminirmlib; print(dir(pyesminirmlib));"
 
-#pip3 install -U sphinx
+#
 # cd docs
 # make html
 
