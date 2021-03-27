@@ -8,7 +8,7 @@ MYMODULE=roadmanager
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
 ~/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind $MYMODULE  --single-file   --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++17 -DNDEBUG $IPATHS
 ## This overwrites our modified version of src/roadmanager/pyroadmanager.cpp
-git diff src/roadmanager/pyroadmanager.cpp
+git --no-pager diff src/roadmanager/pyroadmanager.cpp
 git checkout src/roadmanager/pyroadmanager.cpp
 
 MYMODULE=scenarioengine

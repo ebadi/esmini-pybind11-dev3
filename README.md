@@ -44,6 +44,7 @@ root@c77d1e4ef709:/# cd esmini-pybind11 ; ./dev-building-bindings.sh
 #### Option 3: Dev build, rebuilding the bindings
 
 ```
+./install_req.sh
 ./dev-building-bindings.sh
 ```
 

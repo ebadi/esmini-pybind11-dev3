@@ -14,6 +14,7 @@ ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Libraries/esminiRMLib/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/pugixml/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/SUMO/linux/include/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/OpenSceneGraph/linux/include/
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/OpenSceneGraph/linux/build/include/
 ${CMAKE_CURRENT_SOURCE_DIR}/src/
 ${CMAKE_CURRENT_SOURCE_DIR}/src/roadmanager/
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ScenarioEngine/SourceFiles/
@@ -34,6 +35,7 @@ link_libraries(
 -L${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Libraries/esminiRMLib/
 -L${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/
 -L${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ViewerBase/
+-L${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/OpenSceneGraph/linux/lib/
 -lesminiLib
 -lesminiRMLib
 )
