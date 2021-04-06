@@ -21,11 +21,14 @@ pip3 install -U sphinx
 
 # e1e4227
 # if this fails because of not finding pybind11, it is probably because the environemnt is not ready. Try to logout/restart
-git clone https://github.com/RosettaCommons/binder.git
-cd binder
-cmake CMakeLists.txt -DCMAKE_INSTALL_PREFIX:PATH=~/binder/ 
-make
-make install
-cd ..
+if [ ! -d "binder" ]
+then
+  git clone https://github.com/RosettaCommons/binder.git
+  cd binder
+  cmake CMakeLists.txt -DCMAKE_INSTALL_PREFIX:PATH=~/binder/
+  make
+  make install
+  cd ..
+fi
 
 
