@@ -28,8 +28,8 @@ needed for the pybind11 submodule and then choose one of the following three opt
 
 ```
 docker build -t esmini/docker-ubuntu .
-docker run -i -tt esmini/docker-ubuntu /bin/bash
-root@c77d1e4ef709:/# export LD_LIBRARY_PATH=esmini-pybind11/esmini/bin
+docker run -i -t esmini/docker-ubuntu /bin/bash
+root@c77d1e4ef709:/# export LD_LIBRARY_PATH=/esmini-pybind11/esmini/bin
 root@c77d1e4ef709:/# python3 -c "import pyplayerbase; print(dir(pyplayerbase.ScenarioPlayer));"
 root@c77d1e4ef709:/# python3 esmini-pybind11/tests/esmini.py
 root@c77d1e4ef709:/# cd esmini-pybind11 ; ./dev-building-bindings.sh
@@ -38,19 +38,24 @@ root@c77d1e4ef709:/# cd esmini-pybind11 ; ./dev-building-bindings.sh
 #### Option 2: Prod build, using prebuilt bindings
 
 ```
+export LD_LIBRARY_PATH=$PWD/esmini/bin:
 ./prod-use-prebuilt-bindings.sh
 ```
 
 #### Option 3: Dev build, rebuilding the bindings
 
 ```
+export LD_LIBRARY_PATH=$PWD/esmini/bin:
 ./install_req.sh
 ./dev-building-bindings.sh
+
+# for only compiling esmini, and python package (without rebuilding the bindings)
+./prod-use-prebuilt-bindings.sh
 ```
 
 ## Progress
 
-| Module  | pyBind11  | documentation |   Comment | 
+| Module  | pyBind11  | documentation |   Comment |
 | ------------- | ------------- | ------------- | ------------- |
 | RoadManager  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyroadmanager.html) | Problems with LaneRoadMarkType::Print(), IsIndirectlyConnected |
 | ScenarioEngine  | **Done**  (incomplete) | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyscenarioengine.html)  | Not all methods are covered |
@@ -85,6 +90,10 @@ python3 -c "import pyplayerbase; print(dir(pyplayerbase.ScenarioPlayer));"
 from pyroadmanager.roadmanager import *
 g = Geometry(1,2,3,4,5, Geometry.GEOMETRY_TYPE_UNKNOWN )
 print(g.GetHdg()) # prints 4.0
+
+export LD_LIBRARY_PATH=$PWD/esmini/bin:
+python3 tests/esmini.py
+python3 tests/scenarioplayer.py
 ```
 
 
