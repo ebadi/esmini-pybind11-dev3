@@ -1,5 +1,6 @@
 #!/bin/bash
 
+pip3 uninstall cmake_example -y
 ./build_esmini.sh
 
 IPATHS=" -Iesmini/externals/pugixml/ -Iesmini/EnvironmentSimulator/Modules/CommonMini/ -Iesmini/EnvironmentSimulator/Modules/RoadManager -Iesmini/EnvironmentSimulator/Modules/Controllers  -Iesmini/EnvironmentSimulator/Modules/PlayerBase -Iesmini/EnvironmentSimulator/Modules/ScenarioEngine/SourceFiles/  -Iesmini/EnvironmentSimulator/Modules/ScenarioEngine/OSCTypeDefs/ -Iesmini/EnvironmentSimulator/Modules/ViewerBase -Iesmini/EnvironmentSimulator/Libraries/esminiLib/  -Iesmini/EnvironmentSimulator/Libraries/esminiRMLib/ -Iesmini/bin/ -Iesmini/externals/OpenSceneGraph/linux/include/"
@@ -39,11 +40,12 @@ rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
 #~/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind "" --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++17 -DNDEBUG $IPATHS
 
 # pip3 uninstall cmake_example
+
 pip3 install . ;
 
 #python3 -c "import pyroadmanager.roadmanager; print(dir(pyroadmanager.roadmanager));"
 #python3 -c "import pyscenarioengine.scenarioengine; print(dir(pyscenarioengine.scenarioengine));"
-python3 -c "import pyplayerbase; print(dir(pyplayerbase.ScenarioPlayer));"
+#python3 -c "import pyplayerbase; print(dir(pyplayerbase.ScenarioPlayer));"
 #python3 -c "import pyviewerbase; print(dir(pyviewerbase.viewer));"
 #python3 -c "import pycontroller; print(dir(pycontroller.scenarioengine));"
 
