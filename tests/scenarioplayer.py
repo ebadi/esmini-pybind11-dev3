@@ -5,3 +5,4 @@ import pyplayerbase
 from pyplayerbase import *
 
 player = ScenarioPlayer()
+

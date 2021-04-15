@@ -36,7 +36,7 @@ MYMODULE=esminirmlib
 rm -rf $PWD/src/$MYMODULE ;  mkdir  $PWD/src/$MYMODULE
 ~/binder/bin/binder --root-module py$MYMODULE --prefix $PWD/src/$MYMODULE --bind "" --single-file  --config $PWD/src/py$MYMODULE.cfg  $PWD/src/py$MYMODULE.hpp  -- -std=c++17 -DNDEBUG $IPATHS
 
-
+# pip3 uninstall cmake_example
 pip3 install . ;
 
 python3 -c "import pyroadmanager.roadmanager; print(dir(pyroadmanager.roadmanager));"
