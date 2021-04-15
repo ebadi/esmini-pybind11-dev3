@@ -67,6 +67,14 @@ export LD_LIBRARY_PATH=$PWD/esmini/bin:
 
 
 ### Issues
+
+#### Issue 1: Memory corruption
+
+```
+./dev-building-bindings.sh ; pip3 install .
+python3 tests/scenarioplayer.py
+```
+#### Issue 2: Not all methods have bindings
 [As explained here](https://github.com/RosettaCommons/binder/issues/151), not all C/C++ types could be adequately represented in Python. Particularly functions that take/produce `char *argv[]` could not be bound in Python without creating special wrapper. This is something that will require human attention to resolve. Usually such function rewritten in manner that made them more Python friendly. For instance function that you mention might be rewritten as one that takes single `std::vector<std::string> const &` argument.
 
 Esmini Answer: We've tried to stick with basic C data types to simplify DLL usage. Maybe it would be possible to use C++ std-types as well, but would need some investigation and testing on a few platforms.
@@ -77,6 +85,8 @@ Esmini Answer: We've tried to stick with basic C data types to simplify DLL usag
 - Testcases for each method: **Not Done**
 
 
+
+Testing the bindings
 ```
 python3 -c "import pyroadmanager.roadmanager; print(dir(pyroadmanager.roadmanager));"
 ['Arc', 'CONTACT_POINT_END', 'CONTACT_POINT_NONE', 'CONTACT_POINT_START', 'CONTACT_POINT_UNKNOWN', 'Clothoid', 'Connection', 'ContactPointType', 'Elevation', 'Geometry', 'Junction', 'JunctionLaneLink', 'Lane', 'LaneBoundaryOSI', 'LaneInfo', 'LaneLink', 'LaneOffset', 'LaneRoadLaneConnection', 'LaneRoadMark', 'LaneRoadMarkType', 'LaneRoadMarkTypeLine', 'LaneSection', 'LaneWidth', 'Line', 'Nurbs', 'OSIPoints', 'Object', 'OpenDrive', 'ParamPoly3', 'Poly3', 'PolyLine', 'Polynomial', 'Position', 'ROADTYPE_BICYCLE', 'ROADTYPE_LOWSPEED', 'ROADTYPE_MOTORWAY', 'ROADTYPE_PEDESTRIAN', 'ROADTYPE_RURAL', 'ROADTYPE_TOWN', 'ROADTYPE_UNKNOWN', 'Road', 'RoadLink', 'RoadMarkInfo', 'RoadPath', 'RoadType', 'Route', 'Shape', 'Signal', 'Spiral', 'Trajectory', '__doc__', '__loader__', '__name__', '__package__', '__spec__']
