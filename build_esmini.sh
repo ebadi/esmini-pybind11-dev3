@@ -1,5 +1,5 @@
 #!/bin/bash
-d
+
 git clone https://github.com/ebadi/esmini.git
 mkdir build
 cd build
