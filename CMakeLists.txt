@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.4...3.18)
+
 message(STATUS "CMake version: " ${CMAKE_VERSION})
 
 # Set to the current lowest tested version of CMake
@@ -461,7 +461,7 @@ if (USE_OSG)
 
 endif (USE_OSG)
 
-
+cmake_minimum_required(VERSION 3.4...3.18)
 add_subdirectory(pybind11)
 find_package(PythonLibs 3)
 
@@ -473,7 +473,7 @@ set(CMAKE_INTERPROCEDURAL_OPTIMIZATION OFF)
 
 pybind11_add_module(pyplayerbase MODULE src/playerbase/pyplayerbase.cpp)
 
-#target_link_libraries(pyplayerbase PRIVATE ViewerBase PlayerBase Controllers ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
-target_link_libraries(pyplayerbase PRIVATE ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
+target_link_libraries(pyplayerbase PRIVATE ViewerBase PlayerBase Controllers CommonMini RoadManager ScenarioEngine ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
+#target_link_libraries(pyplayerbase PRIVATE ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
 
 target_compile_definitions(pyplayerbase PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})

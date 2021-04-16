@@ -6,7 +6,8 @@ ADD install_req.sh install_req.sh
 RUN ./install_req.sh
 
 ADD . esmini-pybind11
-RUN cd esmini-pybind11/ && ./dev-building-bindings.sh
+
+#RUN cd esmini-pybind11/ && ./dev-building-bindings.sh
 
 #sudo docker images
 #sudo docker image rm 5388877132e6
