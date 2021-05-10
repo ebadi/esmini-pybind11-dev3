@@ -18,18 +18,19 @@
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
-	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>);
-	PYBIND11_DECLARE_HOLDER_TYPE(T, T*);
-	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>);
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
 #endif
 
 void bind_unknown_unknown(std::function< pybind11::module &(std::string const &namespace_) > &M)
 {
 	{ // ScenarioPlayer file: line:35
 		pybind11::class_<ScenarioPlayer, std::shared_ptr<ScenarioPlayer>> cl(M(""), "ScenarioPlayer", "");
+		cl.def( pybind11::init( [](){ return new ScenarioPlayer(); } ) );
 		cl.def_readwrite("sensor", &ScenarioPlayer::sensor);
-		cl.def_readonly("maxStepSize", &ScenarioPlayer::maxStepSize);
-		cl.def_readonly("minStepSize", &ScenarioPlayer::minStepSize);
+		cl.def_readwrite("maxStepSize", &ScenarioPlayer::maxStepSize);
+		cl.def_readwrite("minStepSize", &ScenarioPlayer::minStepSize);
 		cl.def_readwrite("opt", &ScenarioPlayer::opt);
 		cl.def_readwrite("callback", &ScenarioPlayer::callback);
 		cl.def_readwrite("exe_path_", &ScenarioPlayer::exe_path_);

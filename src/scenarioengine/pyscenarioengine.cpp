@@ -16,9 +16,9 @@
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
-	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>);
-	PYBIND11_DECLARE_HOLDER_TYPE(T, T*);
-	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>);
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
 #endif
 
 void bind_unknown_unknown(std::function< pybind11::module &(std::string const &namespace_) > &M)
@@ -68,9 +68,9 @@ void bind_unknown_unknown(std::function< pybind11::module &(std::string const &n
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
-	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>);
-	PYBIND11_DECLARE_HOLDER_TYPE(T, T*);
-	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>);
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
 #endif
 
 void bind_unknown_unknown_1(std::function< pybind11::module &(std::string const &namespace_) > &M)
@@ -243,9 +243,9 @@ void bind_unknown_unknown_1(std::function< pybind11::module &(std::string const 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
-	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>);
-	PYBIND11_DECLARE_HOLDER_TYPE(T, T*);
-	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>);
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
 #endif
 
 // scenarioengine::StoryBoardElement file: line:20
@@ -792,9 +792,9 @@ void bind_unknown_unknown_2(std::function< pybind11::module &(std::string const 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
-	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>);
-	PYBIND11_DECLARE_HOLDER_TYPE(T, T*);
-	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>);
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
 #endif
 
 // scenarioengine::OSCPositionLane file: line:85
@@ -1193,9 +1193,9 @@ void bind_unknown_unknown_3(std::function< pybind11::module &(std::string const 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
-	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>);
-	PYBIND11_DECLARE_HOLDER_TYPE(T, T*);
-	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>);
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
 #endif
 
 // scenarioengine::OSCPrivateAction file: line:32
@@ -1799,9 +1799,9 @@ void bind_unknown_unknown_4(std::function< pybind11::module &(std::string const 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
-	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>);
-	PYBIND11_DECLARE_HOLDER_TYPE(T, T*);
-	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>);
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
 #endif
 
 // scenarioengine::LatLaneOffsetAction file: line:329
@@ -2622,9 +2622,9 @@ void bind_unknown_unknown_5(std::function< pybind11::module &(std::string const 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
-	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>);
-	PYBIND11_DECLARE_HOLDER_TYPE(T, T*);
-	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>);
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
 #endif
 
 // scenarioengine::VisibilityAction file: line:702
@@ -3069,9 +3069,9 @@ void bind_unknown_unknown_6(std::function< pybind11::module &(std::string const 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
-	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>);
-	PYBIND11_DECLARE_HOLDER_TYPE(T, T*);
-	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>);
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
 #endif
 
 // scenarioengine::TrigByTraveledDistance file: line:192
@@ -3566,9 +3566,9 @@ void bind_unknown_unknown_7(std::function< pybind11::module &(std::string const 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
-	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>);
-	PYBIND11_DECLARE_HOLDER_TYPE(T, T*);
-	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>);
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
 #endif
 
 // scenarioengine::TrigBySimulationTime file: line:383
@@ -3938,9 +3938,9 @@ void bind_unknown_unknown_8(std::function< pybind11::module &(std::string const 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
 	#define BINDER_PYBIND11_TYPE_CASTER
-	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>);
-	PYBIND11_DECLARE_HOLDER_TYPE(T, T*);
-	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>);
+	PYBIND11_DECLARE_HOLDER_TYPE(T, std::shared_ptr<T>)
+	PYBIND11_DECLARE_HOLDER_TYPE(T, T*)
+	PYBIND11_MAKE_OPAQUE(std::shared_ptr<void>)
 #endif
 
 void bind_unknown_unknown_9(std::function< pybind11::module &(std::string const &namespace_) > &M)
@@ -3960,7 +3960,6 @@ void bind_unknown_unknown_9(std::function< pybind11::module &(std::string const 
 		cl.def("parseEntities", (int (scenarioengine::ScenarioReader::*)()) &scenarioengine::ScenarioReader::parseEntities, "C++: scenarioengine::ScenarioReader::parseEntities() --> int");
 		cl.def("parseInit", (void (scenarioengine::ScenarioReader::*)(class scenarioengine::Init &)) &scenarioengine::ScenarioReader::parseInit, "C++: scenarioengine::ScenarioReader::parseInit(class scenarioengine::Init &) --> void", pybind11::arg("init"));
 		cl.def("parseStoryBoard", (int (scenarioengine::ScenarioReader::*)(class scenarioengine::StoryBoard &)) &scenarioengine::ScenarioReader::parseStoryBoard, "C++: scenarioengine::ScenarioReader::parseStoryBoard(class scenarioengine::StoryBoard &) --> int", pybind11::arg("storyBoard"));
-		cl.def("IsLoaded", (bool (scenarioengine::ScenarioReader::*)()) &scenarioengine::ScenarioReader::IsLoaded, "C++: scenarioengine::ScenarioReader::IsLoaded() --> bool");
 		cl.def("LoadControllers", (void (scenarioengine::ScenarioReader::*)()) &scenarioengine::ScenarioReader::LoadControllers, "C++: scenarioengine::ScenarioReader::LoadControllers() --> void");
 		cl.def("UnloadControllers", (void (scenarioengine::ScenarioReader::*)()) &scenarioengine::ScenarioReader::UnloadControllers, "C++: scenarioengine::ScenarioReader::UnloadControllers() --> void");
 	}
