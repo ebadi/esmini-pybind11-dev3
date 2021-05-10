@@ -4,5 +4,9 @@
 import pyplayerbase
 from pyplayerbase import *
 
-#player = ScenarioPlayer()
 
+x = ScenarioPlayer
+print( x )
+print( type(x))
+print( dir(x))
+print( x() )
