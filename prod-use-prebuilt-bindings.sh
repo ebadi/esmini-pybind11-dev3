@@ -1,5 +1,5 @@
 #!/bin/bash
-pip3 uninstall cmake_example -y
+pip3 uninstall cmake_example -y &>/dev/null
 
 ./build_esmini.sh
 

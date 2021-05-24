@@ -1,4 +1,5 @@
 // File: unknown/unknown.cpp
+#include <iterator>
 #include <memory>
 #include <sstream> // __str__
 #include <string>
@@ -27,13 +28,16 @@ void bind_unknown_unknown(std::function< pybind11::module &(std::string const &n
 {
 	{ // ScenarioPlayer file: line:35
 		pybind11::class_<ScenarioPlayer, std::shared_ptr<ScenarioPlayer>> cl(M(""), "ScenarioPlayer", "");
-		cl.def( pybind11::init( [](){ return new ScenarioPlayer(); } ) );
+		//cl.def( pybind11::init( [](){ return new ScenarioPlayer(); } ) );
+		cl.def( pybind11::init<const std::string &, int>());
 		cl.def_readwrite("sensor", &ScenarioPlayer::sensor);
 		cl.def_readwrite("maxStepSize", &ScenarioPlayer::maxStepSize);
 		cl.def_readwrite("minStepSize", &ScenarioPlayer::minStepSize);
 		cl.def_readwrite("opt", &ScenarioPlayer::opt);
 		cl.def_readwrite("callback", &ScenarioPlayer::callback);
 		cl.def_readwrite("exe_path_", &ScenarioPlayer::exe_path_);
+		cl.def_readwrite("name", &ScenarioPlayer::name);
+		cl.def_readwrite("hunger", &ScenarioPlayer::hunger);
 		cl.def("IsQuitRequested", (bool (ScenarioPlayer::*)()) &ScenarioPlayer::IsQuitRequested, "C++: ScenarioPlayer::IsQuitRequested() --> bool");
 		cl.def("SetOSIFileStatus", [](ScenarioPlayer &o, bool const & a0) -> void { return o.SetOSIFileStatus(a0); }, "", pybind11::arg("is_on"));
 		cl.def("SetOSIFileStatus", (void (ScenarioPlayer::*)(bool, const char *)) &ScenarioPlayer::SetOSIFileStatus, "C++: ScenarioPlayer::SetOSIFileStatus(bool, const char *) --> void", pybind11::arg("is_on"), pybind11::arg("filename"));
