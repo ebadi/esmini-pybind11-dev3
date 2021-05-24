@@ -37,14 +37,14 @@ root@c77d1e4ef709:/# python3 -c "import pyplayerbase; print(dir(pyplayerbase.Sce
 #### Option 2: Prod build, using prebuilt bindings
 
 ```
-export LD_LIBRARY_PATH=$PWD/esmini/bin:
+export LD_LIBRARY_PATH=$PWD/esmini/bin:$PWD/bin:
 ./prod-use-prebuilt-bindings.sh
 ```
 
 #### Option 3: Dev build, rebuilding the bindings
 
 ```
-export LD_LIBRARY_PATH=$PWD/esmini/bin:
+export LD_LIBRARY_PATH=$PWD/esmini/bin:$PWD/bin:
 ./install_req.sh
 ./dev-building-bindings.sh
 
