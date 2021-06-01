@@ -9,4 +9,4 @@ x = ScenarioPlayer
 print( x )
 print( type(x))
 print( dir(x))
-print( x() )
+print( x("test",1) )

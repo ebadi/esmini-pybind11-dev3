@@ -479,8 +479,8 @@ pybind11_add_module(pyplayerbase MODULE src/playerbase/pyplayerbase.cpp)
 #ImportError: /usr/local/lib/python3.8/dist-packages/pyplayerbase.cpython-38-x86_64-linux-gnu.so: undefined symbol: _ZTTN6viewer18VisibilityCallbackE
 # Maybe try add_definitions(-DOSG_LIBRARY_STATIC -D_SCENARIO_VIEWER)
 
+target_link_libraries(pyplayerbase PRIVATE ${SOCK_LIB} ${TIME_LIB} esminiLib  ViewerBase PlayerBase Controllers CommonMini RoadManager ScenarioEngine ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
 
-target_link_libraries(pyplayerbase PRIVATE esminiLib  ViewerBase PlayerBase Controllers CommonMini RoadManager ScenarioEngine ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
 #target_link_libraries(pyplayerbase PRIVATE ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
 
 target_compile_definitions(pyplayerbase PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})

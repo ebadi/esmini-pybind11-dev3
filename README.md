@@ -12,6 +12,17 @@
 
 * Visual Studio 2015 or newer (required for all Python versions, see notes below)
 * CMake >= 3.8 (3.8 was the first version to support VS 2015) or Pip 10+
+* Python development in VS
+```
+git clone https://github.com/ebadi/esmini-pybind11.git  --recursive
+	# Make sure VS is installed correctly by :
+	cd esmini-pybind11
+	git clone https://github.com/ebadi/esmini.git
+	cmake . -G "Visual Studio 16 2019"
+	cmake --build . --config Release --target install
+	
+pip install ./esmini-pybind11
+```
 
 ## Installation
 
