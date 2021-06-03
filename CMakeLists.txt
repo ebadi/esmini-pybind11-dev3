@@ -468,14 +468,13 @@ find_package(PythonLibs 3)
 include_directories( ${VIEWER_BASE_INCLUDE_DIR} ${PLAYER_BASE_INCLUDE_DIR} ${ROADMANAGER_INCLUDE_DIR} ${SCENARIOENGINE_INCLUDE_DIR} ${ROADMANAGER_DLL_INCLUDE_DIR} ${SCENARIOENGINE_DLL_INCLUDE_DIR} ${REPLAY_INCLUDE_DIR} ${SCENARIOENGINE_INCLUDE_DIRS} ${COMMON_MINI_INCLUDE_DIR}  ${CONTROLLERS_INCLUDE_DIR}  ${OSG_INCLUDE_DIR}  ${OSI_INCLUDE_DIR} ${SUMO_INCLUDE_DIR} )
 
 
-
-
 set(CMAKE_INTERPROCEDURAL_OPTIMIZATION OFF)
 
 #MODULE/SHARED
 
 
 
+############################## WORKING 
 # without esminiLib:
 #  File "tests/scenarioplayer.py", line 4, in <module>
 #    import pyplayerbase
@@ -500,4 +499,20 @@ ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/versi
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/pugixml/pugixml.cpp)
 target_link_libraries(pycontroller PRIVATE ${SOCK_LIB} ${TIME_LIB} esminiLib  ViewerBase PlayerBase Controllers CommonMini RoadManager ScenarioEngine ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
 target_compile_definitions(pycontroller PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
+
+
+
+file(GLOB SCENARIO_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ScenarioEngine/SourceFiles/*.cpp" 	"${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ScenarioEngine/OSCTypeDefs/*.cpp")
+pybind11_add_module(pyscenarioengine src/scenarioengine/pyscenarioengine.cpp
+${SCENARIO_SRCS}
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/RoadManager.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/odrSpiral.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/CommonMini.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/buildnr.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/version.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/pugixml/pugixml.cpp
+)
+target_link_libraries(pyscenarioengine PRIVATE ${SOCK_LIB} ${TIME_LIB} ${OSG_LIBRARIES_PATH} ${OSI_LIBRARIES_PATH} ${SUMO_LIBRARIES_PATH} esminiLib  ViewerBase PlayerBase Controllers CommonMini RoadManager ScenarioEngine ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
+target_compile_definitions(pyscenarioengine PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
+
 
