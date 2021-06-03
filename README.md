@@ -13,6 +13,10 @@
 * Visual Studio 2015 or newer (required for all Python versions, see notes below)
 * CMake >= 3.8 (3.8 was the first version to support VS 2015) or Pip 10+
 * Python development in VS
+
+
+## Installation
+
 ```
 git clone https://github.com/ebadi/esmini-pybind11.git  --recursive
 	# Make sure VS is installed correctly by :
@@ -22,13 +26,10 @@ git clone https://github.com/ebadi/esmini-pybind11.git  --recursive
 	cmake --build . --config Release --target install
 	
 pip install ./esmini-pybind11
-```
+python ./esmini-pybind11/tests/roadmanager.py
+python ./esmini-pybind11/tests/esmini.py
+python ./esmini-pybind11/tests/scenarioplayer.py
 
-## Installation
-
-```
-git clone https://github.com/ebadi/esmini-pybind11.git  --recursive
-cd esmini-pybind11/
 ```
 
 Just clone this repository and pip install. Note the `--recursive` option which is
@@ -112,8 +113,6 @@ g = Geometry(1,2,3,4,5, Geometry.GEOMETRY_TYPE_UNKNOWN )
 print(g.GetHdg()) # prints 4.0
 
 export LD_LIBRARY_PATH=$PWD/esmini/bin:
-python3 tests/esmini.py
-python3 tests/scenarioplayer.py
 ```
 
 
