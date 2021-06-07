@@ -5,10 +5,11 @@ import pyplayerbase
 from pyplayerbase import *
 
 
-x = ScenarioPlayer
-print( x )
-print( type(x))
-print( dir(x))
-print("Start")
-print( x("test",1) )
-print("Done")
+print("\nStart")
+result = ScenarioPlayer("test",1)
+print("\nDone")
+print(result)
+
+
+
+

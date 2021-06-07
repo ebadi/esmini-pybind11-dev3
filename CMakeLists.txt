@@ -500,7 +500,7 @@ set(CMAKE_INTERPROCEDURAL_OPTIMIZATION OFF)
 # Maybe try add_definitions(-DOSG_LIBRARY_STATIC -D_SCENARIO_VIEWER)
 
 pybind11_add_module(pyplayerbase MODULE src/playerbase/pyplayerbase.cpp)
-target_link_libraries(pyplayerbase PRIVATE ${SOCK_LIB} ${TIME_LIB} esminiLib  ViewerBase PlayerBase Controllers CommonMini RoadManager ScenarioEngine ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
+target_link_libraries(pyplayerbase PRIVATE ${SOCK_LIB} ${TIME_LIB} esminiLib ViewerBase PlayerBase Controllers CommonMini RoadManager ScenarioEngine ${SUMO_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
 target_compile_definitions(pyplayerbase PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
 
 
