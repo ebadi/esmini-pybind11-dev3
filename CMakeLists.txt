@@ -475,28 +475,6 @@ set(CMAKE_INTERPROCEDURAL_OPTIMIZATION OFF)
 
 
 
-#####################
-file(GLOB VIEWER_SRCS
-	"${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ViewerBase/*.cpp"
-)
-
-pybind11_add_module(pyviewerbase MODULE src/viewerbase/pyviewerbase.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/RoadManager.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/odrSpiral.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/buildnr.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/version.cpp
-${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/pugixml/pugixml.cpp
-)
-
-add_definitions(-D_CRT_SECURE_NO_WARNINGS)
-add_definitions(-DOSG_LIBRARY_STATIC -D_SCENARIO_VIEWER)
-
-
-target_link_libraries(pyviewerbase PRIVATE  ${SOCK_LIB} ${TIME_LIB}  ViewerBase PlayerBase Controllers CommonMini RoadManager ScenarioEngine ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
-target_compile_definitions(pyviewerbase PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
-
-
-
 pybind11_add_module(pyplayerbase MODULE src/playerbase/pyplayerbase.cpp)
 target_link_libraries(pyplayerbase PRIVATE ${SOCK_LIB} ${TIME_LIB}  ViewerBase PlayerBase Controllers CommonMini RoadManager ScenarioEngine ${SUMO_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
 target_compile_definitions(pyplayerbase PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
@@ -519,4 +497,44 @@ target_link_libraries(pycontroller PRIVATE ${SOCK_LIB} ${TIME_LIB}   ViewerBase 
 target_compile_definitions(pycontroller PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
 
 
+
+file(GLOB SCENARIO_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ScenarioEngine/SourceFiles/*.cpp" 	"${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ScenarioEngine/OSCTypeDefs/*.cpp")
+pybind11_add_module(pyscenarioengine src/scenarioengine/pyscenarioengine.cpp
+${SCENARIO_SRCS}
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/RoadManager.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/odrSpiral.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/CommonMini.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/buildnr.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/version.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/pugixml/pugixml.cpp
+)
+target_link_libraries(pyscenarioengine PRIVATE ${SOCK_LIB} ${TIME_LIB} ${OSG_LIBRARIES_PATH} ${OSI_LIBRARIES_PATH} ${SUMO_LIBRARIES_PATH} esminiLib  ViewerBase PlayerBase Controllers CommonMini RoadManager ScenarioEngine ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
+target_compile_definitions(pyscenarioengine PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
+
+
+
+
+
+
+
+
+#####################
+file(GLOB VIEWER_SRCS
+	"${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/ViewerBase/*.cpp"
+)
+
+pybind11_add_module(pyviewerbase MODULE src/viewerbase/pyviewerbase.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/RoadManager.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/RoadManager/odrSpiral.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/buildnr.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/version.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/pugixml/pugixml.cpp
+)
+
+add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+add_definitions(-DOSG_LIBRARY_STATIC ) # -D_SCENARIO_VIEWER
+
+
+target_link_libraries(pyviewerbase PRIVATE  ${SOCK_LIB} ${TIME_LIB}  ViewerBase PlayerBase Controllers CommonMini RoadManager ScenarioEngine ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
+target_compile_definitions(pyviewerbase PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
 
