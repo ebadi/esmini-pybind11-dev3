@@ -29,7 +29,8 @@ void bind_unknown_unknown(std::function< pybind11::module &(std::string const &n
 	{ // ScenarioPlayer file: line:35
 		pybind11::class_<ScenarioPlayer, std::shared_ptr<ScenarioPlayer>> cl(M(""), "ScenarioPlayer", "");
 		//cl.def( pybind11::init( [](){ return new ScenarioPlayer(); } ) );
-		cl.def( pybind11::init<const std::string &, int>());
+		//cl.def( pybind11::init<const std::string &, int>());
+		cl.def( pybind11::init<int>());
 		cl.def_readwrite("sensor", &ScenarioPlayer::sensor);
 		cl.def_readwrite("maxStepSize", &ScenarioPlayer::maxStepSize);
 		cl.def_readwrite("minStepSize", &ScenarioPlayer::minStepSize);
