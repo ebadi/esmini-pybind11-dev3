@@ -22,9 +22,9 @@ git clone https://github.com/ebadi/esmini-pybind11.git  --recursive
 cd esmini-pybind11
 git clone https://github.com/ebadi/esmini.git
 
-	# Make sure VS is installed correctly:
-	cmake . -G "Visual Studio 16 2019"
-	cmake --build . --config Release --target install
+	## Make sure VS is installed correctly:
+	# cmake . -G "Visual Studio 16 2019"
+	# cmake --build . --config Release --target install
 
 cd ..	
 pip install ./esmini-pybind11
