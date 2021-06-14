@@ -35,10 +35,10 @@ python ./esmini-pybind11/tests/scenarioplayer.py
 ```
 
 Just clone this repository and pip install. Note the `--recursive` option which is
-needed for the pybind11 submodule and then choose one of the following three options :
+needed for the pybind11 submodule and then choose one of the following options :
 
 
-#### Option 1: Build inside the Docker
+#### Option 1: Build bindings inside the Docker
 
 ```
 docker build -t esmini/docker-ubuntu .
@@ -48,14 +48,7 @@ root@c77d1e4ef709:/# export LD_LIBRARY_PATH=$PWD/bin:
 root@c77d1e4ef709:/# python3 -c "import pyplayerbase; print(dir(pyplayerbase.ScenarioPlayer));"
 ```
 
-#### Option 2: Prod build, using prebuilt bindings
-
-```
-export LD_LIBRARY_PATH=$PWD/esmini/bin:$PWD/bin:
-./prod-use-prebuilt-bindings.sh
-```
-
-#### Option 3: Dev build, rebuilding the bindings
+#### Option 2: Build bindings
 
 ```
 export LD_LIBRARY_PATH=$PWD/esmini/bin:$PWD/bin:
