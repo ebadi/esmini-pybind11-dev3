@@ -6,7 +6,7 @@ from pyplayerbase import *
 
 
 print("\nStart")
-result = ScenarioPlayer("test",1)
+result = ScenarioPlayer(1)
 print("\nDone")
 print(result)
 

@@ -508,7 +508,7 @@ ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/build
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/EnvironmentSimulator/Modules/CommonMini/version.cpp
 ${CMAKE_CURRENT_SOURCE_DIR}/esmini/externals/pugixml/pugixml.cpp
 )
-target_link_libraries(pyscenarioengine PRIVATE ${SOCK_LIB} ${TIME_LIB} ${OSG_LIBRARIES_PATH} ${OSI_LIBRARIES_PATH} ${SUMO_LIBRARIES_PATH} esminiLib  ViewerBase PlayerBase Controllers CommonMini RoadManager ScenarioEngine ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
+target_link_libraries(pyscenarioengine PRIVATE ${SOCK_LIB} ${TIME_LIB} ${OSG_LIBRARIES_PATH} ${OSI_LIBRARIES_PATH} ${SUMO_LIBRARIES_PATH} ViewerBase PlayerBase Controllers CommonMini RoadManager ScenarioEngine ${SUMO_LIBRARIES}  ${GTEST_LIBRARIES} ${OSI_LIBRARIES} ${OSG_LIBRARIES})
 target_compile_definitions(pyscenarioengine PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
 
 
