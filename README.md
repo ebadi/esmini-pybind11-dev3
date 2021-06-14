@@ -28,16 +28,21 @@ git clone https://github.com/ebadi/esmini.git
 
 cd ..	
 pip install ./esmini-pybind11
+```
+
+Trying the library:
+
+```
 python ./esmini-pybind11/tests/roadmanager.py
 python ./esmini-pybind11/tests/esmini.py
 python ./esmini-pybind11/tests/scenarioplayer.py
-
 ```
 
-Just clone this repository and pip install. Note the `--recursive` option which is
-needed for the pybind11 submodule and then choose one of the following options :
 
 
+## Development build:
+The method above uses prebuilt bindings. To generate bindings you can use one of the following methods. Some functions need to be commented out before it is being used. 
+Just clone this repository and pip install. Note the `--recursive` option which is needed for the pybind11 submodule and then choose one of the following options :
 #### Option 1: Build bindings inside the Docker
 
 ```
@@ -68,18 +73,15 @@ export LD_LIBRARY_PATH=$PWD/esmini/bin:$PWD/bin:
 | PlayerBase  | **Done** (incomplete) | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyplayerbase.html)  | Not all methods are covered  |
 | ViewerBase  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyviewerbase.html)  | check if all classes/methods are included |
 | Controller  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pycontroller.html)  | check if all classes/methods are included |
-| esminiLib  | **Done** (incomplete) | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyesminilib.html)  | Missing SE_InitWithArgs. [python3: malloc.c:2379: sysmalloc](tests/esmini.py)  |
-| esminiRMLib  | **Done**  | [Done](https://htmlpreview.github.io/?https://github.com/ebadi/esmini-pybind11/blob/master/docs/_build/html/pyesminirmlib.html)  |  The internal methods were used by applications, it seems to be more than a shared library! |
-
 
 ### Issues
 
 #### Issue 1: Memory corruption
-
+causes random crashes on Windows/Linux
 ```
-./dev-building-bindings.sh ; pip3 install .
 python3 tests/scenarioplayer.py
 ```
+
 #### Issue 2: Not all methods have bindings
 [As explained here](https://github.com/RosettaCommons/binder/issues/151), not all C/C++ types could be adequately represented in Python. Particularly functions that take/produce `char *argv[]` could not be bound in Python without creating special wrapper. This is something that will require human attention to resolve. Usually such function rewritten in manner that made them more Python friendly. For instance function that you mention might be rewritten as one that takes single `std::vector<std::string> const &` argument.
 
