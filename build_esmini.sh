@@ -3,8 +3,12 @@
 git clone https://github.com/ebadi/esmini.git
 mkdir build
 cd build
-cmake ../ -DUSE_OSG=true -DCMAKE_BUILD_TYPE=Debug
+cmake ../esmini/
 cmake --build . --config Debug --target install
-cd ../
+cd ..
 
-
+mkdir esmini/build
+cd esmini/build
+cmake ../
+cmake --build . --config Debug --target install
+cd ../..

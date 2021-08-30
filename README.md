@@ -27,22 +27,22 @@ git clone https://github.com/ebadi/esmini.git
 	# cmake --build . --config Release --target install
 
 cd ..	
-pip install ./esmini-pybind11
+pip3 install ./esmini-pybind11
 ```
 
 Trying the library:
 
 ```
-python ./esmini-pybind11/tests/roadmanager.py
-python ./esmini-pybind11/tests/esmini.py
-python ./esmini-pybind11/tests/scenarioplayer.py
+python3 ./esmini-pybind11/tests/roadmanager.py
+python3 ./esmini-pybind11/tests/esmini.py
+python3 ./esmini-pybind11/tests/scenarioplayer.py
 ```
 
 
 
 ## Development build:
 The method above uses prebuilt bindings. To generate bindings you can use one of the following methods. Some functions need to be commented out before it is being used. 
-Just clone this repository and pip install. Note the `--recursive` option which is needed for the pybind11 submodule and then choose one of the following options :
+Just clone this repository and pip3 install. Note the `--recursive` option which is needed for the pybind11 submodule and then choose one of the following options :
 #### Option 1: Build bindings inside the Docker
 
 ```
@@ -59,6 +59,7 @@ root@c77d1e4ef709:/# python3 -c "import pyplayerbase; print(dir(pyplayerbase.Sce
 export LD_LIBRARY_PATH=$PWD/esmini/bin:$PWD/bin:
 ./install_req.sh
 ./dev-building-bindings.sh
+LD_LIBRARY_PATH=/home/wave/repositories/esmini-pybind11/:$LD_LIBRARY_PATH python3 tests/scenarioplayer.py
 
 # for only compiling esmini, and python package (without rebuilding the bindings)
 ./prod-use-prebuilt-bindings.sh
@@ -120,7 +121,7 @@ https://github.com/MRPT/mvsim/tree/master/modules/comms
 
 https://github.com/vgteam/libbdsg/tree/master/bdsg/cmake_bindings
 
-With the `setup.py` file included in this example, the `pip install` command will
+With the `setup.py` file included in this example, the `pip3 install` command will
 invoke CMake and build the pybind11 module as specified in `CMakeLists.txt`.
 
 
