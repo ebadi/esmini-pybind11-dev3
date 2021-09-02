@@ -59,7 +59,7 @@ root@c77d1e4ef709:/# python3 -c "import pyplayerbase; print(dir(pyplayerbase.Sce
 export LD_LIBRARY_PATH=$PWD/esmini/bin:$PWD/bin:
 ./install_req.sh
 ./dev-building-bindings.sh
-LD_LIBRARY_PATH=/home/wave/repositories/esmini-pybind11/:$LD_LIBRARY_PATH python3 tests/scenarioplayer.py
+LD_LIBRARY_PATH=$PWD/esmini/bin/:$LD_LIBRARY_PATH python3 tests/scenarioplayer.py
 
 # for only compiling esmini, and python package (without rebuilding the bindings)
 ./prod-use-prebuilt-bindings.sh
