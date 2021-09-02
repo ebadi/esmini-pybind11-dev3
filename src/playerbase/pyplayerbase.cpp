@@ -14,6 +14,11 @@
 #include "playerbase.hpp"
 #include "IdealSensor.hpp"
 #include "OSIReporter.hpp"
+#include "ScenarioEngine.hpp"
+#include "RoadManager.hpp"
+#include "CommonMini.hpp"
+#include "Server.hpp"
+#include "viewer.hpp"
 
 
 #ifndef BINDER_PYBIND11_TYPE_CASTER
